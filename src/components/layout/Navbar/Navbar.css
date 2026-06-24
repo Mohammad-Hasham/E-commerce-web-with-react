@@ -1,0 +1,189 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Aboreto&family=Adamina&family=Caveat:wght@400..700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Pliant:ital,wght@0,100..900;1,100..900&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap');
+
+
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.navbar {
+  width: 100%;
+  height: 10rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+  box-sizing: border-box;
+  flex-direction: column;
+  margin-bottom: 10px;
+  
+  
+}
+
+img {
+  width: 10rem;
+  height: 7rem;
+  
+}
+                                /* This is the buttom Navbar */
+
+.navbar-items{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 1200px;
+  padding-top: 1.5rem;
+  margin: 0 auto;
+}
+
+.search-bar{
+    display: flex;
+    align-items: center;
+    position: relative;
+    cursor: pointer;
+}
+
+input {
+  width: 25rem;
+  max-width: 100%;
+  height: 3rem;
+  border-radius: 1.6rem;
+  padding: 1rem;
+  padding-right: 3.5rem;
+}
+.search-tag{
+    font-size: 2rem;
+    position: absolute;
+    right: 1rem;
+    cursor: pointer;
+
+}
+
+.add-list {
+  display: flex;
+  gap: 1rem;
+  font-size: 2.5rem;
+  margin: 1rem;
+}
+                                    /* This is the buttom Navbar */
+
+.navbar-items2 {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+ .navbar-items2 ul {
+  display: flex;
+  gap: 3rem;
+  margin-bottom: 2rem;
+}
+ .navbar-items2 li {
+  list-style: none;
+  font-size: 1.5rem;
+  transition: 1s linear;
+  cursor: pointer;
+}
+li:hover {
+ text-decoration: underline
+  
+}
+
+.login{
+  display: flex;
+  gap: 10px;
+  font-size: 1.5rem;
+  cursor: pointer;
+  margin-bottom: 2rem;
+}
+
+
+
+.side-bar{
+  position: fixed;
+  top: 0;
+  right: -250px;
+  width: 250px;
+  height: 100vh;
+  transition: 0.3s;
+  background-color: white;
+}
+.side-bar.show{
+  right: 0;
+}
+
+
+.side-bar ul{
+display: flex;
+flex-direction: column;
+gap: 2rem;
+font-size: 1.5rem;
+margin: 2rem;
+margin-top: 5rem;
+text-align: center;
+
+}
+.side-bar li {
+  width: 100%;
+  list-style: none;
+  font-weight: bold;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.side-bar li:hover{
+  background-color: rgb(198, 194, 194);
+}
+
+.close-tag{
+  height: 40px;
+  width: 40px;
+}
+.outline-bar{
+  display:none;
+  height: 40px;
+  width: 40px;
+}
+
+@media (min-width:768px)and(max-width:1024px){
+  .navbar-items{
+    max-width: 768px;
+  }
+  .navbar-items2{
+    max-width: 768px;
+  }
+}
+
+@media(min-width:300px) and (max-width:767px) {
+  .navbar{
+    height: auto;
+  }
+   .navbar-items{
+    max-width: 360px;
+  }
+  .navbar-items2{
+display: none;
+
+  }
+.login{
+  display: none;
+}
+input{
+  max-width: 15rem;
+}
+
+.outline-bar{
+  display:flex;
+}
+}
+
+
+/* for tomorrow make it Responsive  */
+/* and need hover for input , icons  */

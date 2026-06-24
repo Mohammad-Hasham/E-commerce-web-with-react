@@ -1,0 +1,61 @@
+
+
+.screen {
+display: flex;
+align-items: flex-start;
+justify-content: flex-start;
+height: 100vh;
+max-width: 1200px;
+}
+
+.catigories-conatainer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: baseline;
+    height: 430px;
+    width: 250px;
+    background-color: gray;
+    box-sizing: border-box;
+    font-size: 20px;
+    font-weight: lighter;
+    border-radius: 5px;
+}
+.product-rang{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    font-weight: lighter;
+}
+.checkboxs{
+    display: flex;
+    transition: 0.5s;
+}
+.checkboxs:hover{
+    margin: 10px 0;
+}
+.price{
+    display: flex;
+    gap: 150px;
+}
+hr{
+    width: 100%;
+    color: black;
+}
+input[type="range"] {
+  width: 80%;
+  cursor: pointer;
+  height: 5px;
+  border-radius: 20px;
+  accent-color:lightblue;
+  appearance: black ;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+  appearance: none;
+  width: 10px;
+  height: 10px;
+  background:rgb(96, 129, 141);
+  border-radius: 50%;
+  cursor: pointer;
+}
