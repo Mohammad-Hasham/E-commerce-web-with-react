@@ -1,5 +1,8 @@
 import "./Hero.css"
-
+import sneakerImg from "../../assets/Images/sneaker.png"
+import watchImg from "../../assets/Images/smartwatch.png"
+import headphoneImg  from"../../assets/Images/headphone.png"
+import menHandbags from "../../assets/Images/menHandbags.png"
 
 function Hero (){
 return(
@@ -19,7 +22,10 @@ return(
     </div>
    
     <div className="product-img">
-
+     <img src={sneakerImg} className="sneaker-img" alt="sneaker" />
+     <img src={watchImg}  className="watch-img" alt="" />
+     <img src={headphoneImg} className="headphone-img" alt="" />
+     <img src={menHandbags}  className="handbags-img"alt="handBags" />
     </div>
      
      <div className="slids">

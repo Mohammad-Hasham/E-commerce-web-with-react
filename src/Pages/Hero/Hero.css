@@ -75,8 +75,8 @@ body {
   border-radius: 16px;
   padding: 15px;
   background-color: #24B1B1;
-  color: #ffff;
-  box-shadow: 5px 5px 5px gray;
+  color:black;
+  box-shadow: 1px 5px 5px gray;
 }
 
 .product-img {
@@ -88,7 +88,47 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
   margin-bottom: 50px;
+  position: relative;
+   
 }
+
+.sneaker-img{
+  max-width: 200px;
+  position: absolute;
+  bottom:105px;
+  right:430px;
+  z-index: 2;
+  
+  transform: rotate(-10deg);
+  filter: drop-shadow(20px 20px 20px rgba(0,0,0,0.15));
+}
+
+.watch-img{
+ width: 250px;
+  position: absolute;
+  bottom:190px;
+  right:160px;
+  transform: rotate(-10deg);
+  filter: drop-shadow(20px 20px 20px rgba(0,0,0,0.15));
+}
+.headphone-img{
+  max-width: 150px;
+  position: absolute;
+  bottom:315px;
+  right:370px;
+  transform: rotate(-10deg);
+  filter: drop-shadow(20px 20px 20px rgba(0,0,0,0.15));
+}
+.handbags-img{
+ max-width: 250px;
+  position: absolute;
+  top: 200px;
+  right:230px;
+  filter: drop-shadow(20px 20px 20px rgba(0,0,0,0.15));
+}
+    
+  
+
 .slids {
   position: absolute;
   bottom: 10px;
