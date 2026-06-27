@@ -1,9 +1,15 @@
+
+html{
+  font-size: 62.5%;
+}
+
 body {
   margin: 0;
   padding: 0;
   height: 100vh;
   align-content: center;
   justify-content: center;
+  
 }
 
 .banner {
@@ -16,15 +22,15 @@ body {
   color: #787272;
   box-shadow: 15px 10px 10px rgb(167, 164, 164);
   border:5px #7b2525 ;
+  position: relative;
 }
 
 .discount-box {
   display: flex;
   align-items: center;
 
-  height: 500px;
+  height: 50rem;
   border-radius: 16px;
-  position: relative;
 }
 
 .discount-title {
@@ -32,52 +38,61 @@ body {
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  margin: 20px;
+  margin: 2rem;
   font-weight: lighter;
 }
 .discount-title span {
-  font-size: 20px;
+  font-size: 2rem;
   align-self: flex-start;
   color: #24B1B1;
 }
 .discount-title h1 {
-  font-size: 50px;
+  font-size: 5rem;
   font-weight: bold;
   color: black;
 }
 .discount-title p {
-  font-size: 25px;
+  font-size: 2.5rem;
   font-weight: lighter;
-  margin: 30px;
+  margin: 3rem;
 }
 .buttons {
   display: flex;
   align-items: center;
-  gap: 20px;
-  height: 40px;
+  gap: 2rem;
+  height: 4rem;
   font-size: 1.5em;
   font-weight: bold;
-  margin: 30px;
+  margin: 3rem;
 }
 .shop-btn {
-  font-size: 20px;
+  font-size: 2rem;
   border: none;
   border-radius: 16px;
-  padding: 15px;
+  padding: 1.5rem;
   background-color: #ffe5bf;
   color: black;
-  width: 150px;
+  width: 15rem;
   box-shadow: 5px 5px 5px gray;
+  transition: 0.3s;
+
 }
 .explore-btn {
-  font-size: 20px;
+  font-size: 2rem;
   border: none;
   border-radius: 16px;
-  padding: 15px;
+  padding: 1.5rem;
   background-color: #24B1B1;
   color:black;
-  box-shadow: 1px 5px 5px gray;
+  box-shadow: 5px 5px 5px gray;
 }
+
+
+.explore-btn:active {
+  transform: scale(0.95);
+  box-shadow: inset 0 2px 5px rgba(0,0,0,0.3);
+}
+
 
 .product-img {
   flex: 1;
@@ -87,43 +102,45 @@ body {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  margin-bottom: 50px;
+  margin-bottom:5rem;
   position: relative;
    
 }
+.product{
+  position: absolute;
+  inset: 0;
+}
 
 .sneaker-img{
-  max-width: 200px;
+  width: 18%;
   position: absolute;
-  bottom:105px;
-  right:430px;
-  z-index: 2;
-  
+  bottom:23%;
+  right:57%;
   transform: rotate(-10deg);
   filter: drop-shadow(20px 20px 20px rgba(0,0,0,0.15));
 }
 
 .watch-img{
- width: 250px;
+ width: 28%;
   position: absolute;
-  bottom:190px;
-  right:160px;
+  bottom:38%;
+  right:22%;
   transform: rotate(-10deg);
   filter: drop-shadow(20px 20px 20px rgba(0,0,0,0.15));
 }
 .headphone-img{
-  max-width: 150px;
+  width: 18.75%;
   position: absolute;
-  bottom:315px;
-  right:370px;
+  top:8%;
+  right:46%;
   transform: rotate(-10deg);
   filter: drop-shadow(20px 20px 20px rgba(0,0,0,0.15));
 }
 .handbags-img{
- max-width: 250px;
+ max-width: 25rem;
   position: absolute;
-  top: 200px;
-  right:230px;
+  top: 40%;
+  right:29.75%;
   filter: drop-shadow(20px 20px 20px rgba(0,0,0,0.15));
 }
     
@@ -131,13 +148,37 @@ body {
 
 .slids {
   position: absolute;
-  bottom: 10px;
+  bottom: 1rem;
   right: 50%;
+  display: flex;
+  gap: 2rem;
 }
 .slids button {
-  font-size: 20px;
   background: none;
   color: blue;
-  height: 10px;
-  width: 50px;
+  height: 0.6rem;
+  width: 5rem;
+  border-radius: 16px;
+  cursor: pointer;
+  transition: 0.5s;
+}
+
+
+
+
+.slids button:hover{
+  background-color:#24B1B1;
+
+}
+.slids button:focus{
+  background-color:#3a8484;
+  padding-bottom: 3px;
+
+}
+
+
+
+
+
+@media (min-width:768px) and (max-width:1024px){
 }

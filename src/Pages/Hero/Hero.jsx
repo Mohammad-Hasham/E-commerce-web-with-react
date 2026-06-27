@@ -22,15 +22,17 @@ return(
     </div>
    
     <div className="product-img">
+     <div className="product">
      <img src={sneakerImg} className="sneaker-img" alt="sneaker" />
      <img src={watchImg}  className="watch-img" alt="" />
      <img src={headphoneImg} className="headphone-img" alt="" />
      <img src={menHandbags}  className="handbags-img"alt="handBags" />
+     </div>
     </div>
      
      <div className="slids">
-<button className="left-side">_</button>
-<button className="right-side">_</button>
+<button className="left-side"></button>
+<button className="right-side"></button>
      </div>
 </div>
 
