@@ -3,6 +3,7 @@ import sneakerImg from "../../assets/Images/sneaker.png"
 import watchImg from "../../assets/Images/smartwatch.png"
 import headphoneImg  from"../../assets/Images/headphone.png"
 import menHandbags from "../../assets/Images/menHandbags.png"
+import porductImg from "../../assets/Images/stande.png"
 
 function Hero (){
 return(
@@ -23,6 +24,7 @@ return(
    
     <div className="product-img">
      <div className="product">
+          <img src={porductImg} className="stand" alt="stand" />
      <img src={sneakerImg} className="sneaker-img" alt="sneaker" />
      <img src={watchImg}  className="watch-img" alt="" />
      <img src={headphoneImg} className="headphone-img" alt="" />
