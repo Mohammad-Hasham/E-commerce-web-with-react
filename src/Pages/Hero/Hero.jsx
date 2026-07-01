@@ -3,7 +3,7 @@ import sneakerImg from "../../assets/Images/sneaker.png"
 import watchImg from "../../assets/Images/smartwatch.png"
 import headphoneImg  from"../../assets/Images/headphone.png"
 import menHandbags from "../../assets/Images/menHandbags.png"
-import porductImg from "../../assets/Images/stande.png"
+import standImg from "../../assets/Images/stande.png"
 
 function Hero (){
 return(
@@ -15,21 +15,20 @@ return(
     <span>Summer sales</span>
     <h1>Up to 50% OFF </h1>
     <p>On Seleted items</p>
-<div className="buttons">
+
+       
+    </div>
+    <div className="buttons">
      <button className="shop-btn">Shop</button>
         <button className="explore-btn"> Explore Deails</button>
 </div>
-       
-    </div>
    
     <div className="product-img">
-     <div className="product">
-          <img src={porductImg} className="stand" alt="stand" />
+     <img src={standImg} alt="" />
      <img src={sneakerImg} className="sneaker-img" alt="sneaker" />
      <img src={watchImg}  className="watch-img" alt="" />
      <img src={headphoneImg} className="headphone-img" alt="" />
      <img src={menHandbags}  className="handbags-img"alt="handBags" />
-     </div>
     </div>
      
      <div className="slids">

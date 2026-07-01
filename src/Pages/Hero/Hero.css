@@ -1,5 +1,4 @@
-
-html{
+html {
   font-size: 62.5%;
 }
 
@@ -7,30 +6,52 @@ body {
   margin: 0;
   padding: 0;
   height: 100vh;
-  align-content: center;
-  justify-content: center;
-  
 }
 
 .banner {
   border-radius: 16px;
-  width: 100%;
   align-content: center;
-  max-width: 1200px;
+  width: min(95%, 1200px);
   margin: 0 auto;
   background-color: #fff2db;
   color: #787272;
   box-shadow: 15px 10px 10px rgb(167, 164, 164);
-  border:5px #7b2525 ;
   position: relative;
+}
+@media(max-width:767px){
+  .banner{
+    width:95%;
+    min-height: 700px;
+  }
 }
 
 .discount-box {
   display: flex;
   align-items: center;
-
-  height: 50rem;
+  min-height: 50rem;
   border-radius: 16px;
+}
+@media(max-width:767px){
+.discount-box{
+flex-direction: column;
+}
+.discount-title{
+  order: 1;
+}
+.product-img{
+  order: 2;
+  width: 100%;
+}
+
+.buttons{
+  order: 3;
+}
+
+.stand{
+height: 300px;
+width: 100%;
+}
+
 }
 
 .discount-title {
@@ -44,7 +65,7 @@ body {
 .discount-title span {
   font-size: 2rem;
   align-self: flex-start;
-  color: #24B1B1;
+  color: #24b1b1;
 }
 .discount-title h1 {
   font-size: 5rem;
@@ -75,77 +96,67 @@ body {
   width: 15rem;
   box-shadow: 5px 5px 5px gray;
   transition: 0.3s;
-
 }
 .explore-btn {
   font-size: 2rem;
   border: none;
   border-radius: 16px;
   padding: 1.5rem;
-  background-color: #24B1B1;
-  color:black;
+  background-color: #24b1b1;
+  color: black;
   box-shadow: 5px 5px 5px gray;
 }
 
-
 .explore-btn:active {
   transform: scale(0.95);
-  box-shadow: inset 0 2px 5px rgba(0,0,0,0.3);
+  box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.3);
 }
-
 
 .product-img {
   flex: 1;
-  width: 100%;
   height: 100%;
- 
+  width: 100%;
   position: relative;
-   
+  display: flex;
+  justify-content: center;
 }
-.product{
-  position: absolute;
-  inset: 0;
-  z-index: 0;
-}
-.stand{
+.stand {
   width: 100%;
-  height: 100%;
+  height: 500px;
 }
 
-.sneaker-img{
-  width: 18%;
+.sneaker-img {
+  width: clamp(80px, 18%, 180px);
   position: absolute;
-  bottom:27%;
-  right:57%;
+  bottom: 27%;
+  right: 57%;
   transform: rotate(-10deg);
-  filter: drop-shadow(20px 20px 20px rgba(0,0,0,0.15));
+  filter: drop-shadow(20px 20px 20px rgba(0, 0, 0, 0.15));
 }
 
-.watch-img{
- width: 28%;
+.watch-img {
+  width: clamp(120px, 28%, 260px);
   position: absolute;
-  bottom:39%;
-  right:23%;
+  bottom: 39%;
+  right: 23%;
   transform: rotate(-10deg);
-  filter: drop-shadow(20px 20px 20px rgba(0,0,0,0.15));
+  filter: drop-shadow(20px 20px 20px rgba(0, 0, 0, 0.15));
 }
-.headphone-img{
-  width: 18.75%;
+.headphone-img {
+  width: clamp(90px, 18%, 170px);
   position: absolute;
-  top:11%;
-  right:46%;
+  top: 11%;
+  right: 46%;
   transform: rotate(-10deg);
-  filter: drop-shadow(20px 20px 20px rgba(0,0,0,0.15));
+  filter: drop-shadow(20px 20px 20px rgba(0, 0, 0, 0.15));
 }
-.handbags-img{
- max-width: 31.25%;
+.handbags-img {
+  width: clamp(140px, 31%, 300px);
   position: absolute;
   top: 34%;
-  right:29.75%;
-  filter: drop-shadow(20px 20px 20px rgba(0,0,0,0.15));
+  right: 29.75%;
+  filter: drop-shadow(20px 20px 20px rgba(0, 0, 0, 0.15));
 }
-    
-  
 
 .slids {
   position: absolute;
@@ -164,25 +175,19 @@ body {
   transition: 0.5s;
 }
 
-
-
-
-.slids button:hover{
-  background-color:#24B1B1;
-
+.slids button:hover {
+  background-color: #24b1b1;
 }
-.slids button:focus{
-  background-color:#3a8484;
+.slids button:focus {
+  background-color: #3a8484;
   padding-bottom: 3px;
-
 }
 
 
 
 
 
-@media (min-width:768px) and (max-width:1024px){
-  .banner{
-    max-width: 1024px;
-  }
-}
+
+
+
+
