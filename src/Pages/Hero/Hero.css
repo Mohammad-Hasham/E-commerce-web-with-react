@@ -28,34 +28,23 @@ body {
 .discount-box {
   display: flex;
   align-items: center;
+  justify-content: space-between;
+  
   min-height: 50rem;
   border-radius: 16px;
 }
-@media(max-width:767px){
-.discount-box{
-flex-direction: column;
-}
-.discount-title{
-  order: 1;
-}
-.product-img{
-  order: 2;
-  width: 100%;
-}
-
-.buttons{
-  order: 3;
-}
-
-.stand{
-height: 300px;
-width: 100%;
-}
+.left-content{
+  display: flex;
+align-items: center;
+  justify-content: space-between;
+  flex-direction: column;
 
 }
+
 
 .discount-title {
   display: flex;
+  flex: 1 1;
   align-items: center;
   justify-content: center;
   flex-direction: column;
@@ -79,6 +68,7 @@ width: 100%;
 }
 .buttons {
   display: flex;
+  flex-basis: 0;
   align-items: center;
   gap: 2rem;
   height: 4rem;
@@ -113,7 +103,7 @@ width: 100%;
 }
 
 .product-img {
-  flex: 1;
+  flex: 1 1;
   height: 100%;
   width: 100%;
   position: relative;
@@ -181,6 +171,28 @@ width: 100%;
 .slids button:focus {
   background-color: #3a8484;
   padding-bottom: 3px;
+}
+
+
+@media(max-width:767px){
+.discount-box{
+    flex-direction:column;
+}
+
+.left-content{
+    order:1;
+    text-align:center;
+}
+
+.product-img{
+    order:2;
+}
+
+.buttons{
+    order:3;
+    justify-content:center;
+}
+
 }
 
 

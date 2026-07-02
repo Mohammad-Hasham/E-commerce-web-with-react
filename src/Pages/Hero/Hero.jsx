@@ -10,18 +10,20 @@ return(
 <section className="banner">
    
 <div className="discount-box">
-     
-    <div className="discount-title">
-    <span>Summer sales</span>
+     <div className="left-content">
+           <div className="discount-title">
+    <span>Summer sales</span> 
     <h1>Up to 50% OFF </h1>
     <p>On Seleted items</p>
-
-       
+    
     </div>
-    <div className="buttons">
+       <div className="buttons">
      <button className="shop-btn">Shop</button>
         <button className="explore-btn"> Explore Deails</button>
 </div>
+     </div>
+     
+   
    
     <div className="product-img">
      <img src={standImg} alt="" />
@@ -35,6 +37,7 @@ return(
 <button className="left-side"></button>
 <button className="right-side"></button>
      </div>
+     
 </div>
 
 </section>
