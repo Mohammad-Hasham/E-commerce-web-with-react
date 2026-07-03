@@ -21,22 +21,19 @@ body {
 @media(max-width:767px){
   .banner{
     width:95%;
-    min-height: 700px;
+  height: 700px;
   }
 }
 
 .discount-box {
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  
   min-height: 50rem;
   border-radius: 16px;
 }
 .left-content{
   display: flex;
 align-items: center;
-  justify-content: space-between;
   flex-direction: column;
 
 }
@@ -96,6 +93,9 @@ align-items: center;
   color: black;
   box-shadow: 5px 5px 5px gray;
 }
+.mobile-btn{
+  display: none;
+}
 
 .explore-btn:active {
   transform: scale(0.95);
@@ -104,19 +104,21 @@ align-items: center;
 
 .product-img {
   flex: 1 1;
-  height: 100%;
-  width: 100%;
-  position: relative;
+ position: relative;
+  max-width: 550px;
+  aspect-ratio: 1 / 1;
+  margin: auto;
   display: flex;
   justify-content: center;
 }
-.stand {
+.stand{
   width: 100%;
-  height: 500px;
+  height:100%;
+  object-fit: contain;
 }
 
 .sneaker-img {
-  width: clamp(80px, 18%, 180px);
+  width:20%;
   position: absolute;
   bottom: 27%;
   right: 57%;
@@ -175,8 +177,32 @@ align-items: center;
 
 
 @media(max-width:767px){
+  .banner{
+  }
 .discount-box{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
     flex-direction:column;
+    margin-bottom: 5rem;
+}
+.discount-title{
+  margin: auto;
+}
+.discount-title span {
+  font-size: 1.5rem;
+  align-self: flex-start;
+  color: #24b1b1;
+}
+.discount-title h1 {
+  font-size: 4rem;
+  font-weight: bold;
+  color: black;
+}
+.discount-title p {
+  font-size: 2rem;
+  font-weight: lighter;
+  margin: 1rem;
 }
 
 .left-content{
@@ -186,11 +212,70 @@ align-items: center;
 
 .product-img{
     order:2;
+    height: 100%;
+    width: 100%;
 }
 
+.stand{
+  width: 90%;
+
+}
+
+.sneaker-img {
+  bottom: 30%;
+  right: 57%;
+}
+.watch-img {
+  bottom: 39%;
+  right: 23%;
+}
+.headphone-img {
+ top: 18%;
+  right: 46%;
+}
+.handbags-img {
+  bottom: 20%;
+  right: 29.75%;
+}
+
+
+
+
 .buttons{
+  display: none;
+}
+
+.mobile-btn{
     order:3;
-    justify-content:center;
+  display: flex;
+  align-items: center;
+  gap: 5rem;
+  font-weight: bold;
+  margin: 1rem;
+  margin-bottom:1rem;
+  
+}
+.shop-mobile-btn {
+  font-size: 1em;
+  border: none;
+  height: 5rem;
+  width: 10rem;
+  border-radius: 16px;
+  background-color: #ffe5bf;
+  color: black;
+  box-shadow: 5px 5px 5px gray;
+  transition: 0.3s;
+}
+.explore-mobile-btn {
+  font-size: 1em;
+  border: none;
+  border-radius: 16px;
+  background-color: #24b1b1;
+  color: black;
+  box-shadow: 2px 2px 2px gray;
+}
+.span-inside-btn{
+  display: none;
 }
 
 }

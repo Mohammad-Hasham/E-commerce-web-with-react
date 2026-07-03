@@ -23,10 +23,14 @@ return(
 </div>
      </div>
      
+       <div className="mobile-btn">
+     <button className="shop-mobile-btn">Shop</button>
+        <button className="explore-btn"> Explore <span className="span-inside-btn">Deails</span> </button>
+     </div>
    
    
     <div className="product-img">
-     <img src={standImg} alt="" />
+     <img src={standImg} className="stand" alt="" />
      <img src={sneakerImg} className="sneaker-img" alt="sneaker" />
      <img src={watchImg}  className="watch-img" alt="" />
      <img src={headphoneImg} className="headphone-img" alt="" />
