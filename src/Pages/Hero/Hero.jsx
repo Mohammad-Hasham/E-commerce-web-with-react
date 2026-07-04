@@ -25,7 +25,7 @@ return(
      
        <div className="mobile-btn">
      <button className="shop-mobile-btn">Shop</button>
-        <button className="explore-btn"> Explore <span className="span-inside-btn">Deails</span> </button>
+        <button className="explore-mobile-btn"> Explore <span className="span-inside-btn">Deails</span> </button>
      </div>
    
    

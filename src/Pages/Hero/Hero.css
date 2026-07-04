@@ -18,12 +18,6 @@ body {
   box-shadow: 15px 10px 10px rgb(167, 164, 164);
   position: relative;
 }
-@media(max-width:767px){
-  .banner{
-    width:95%;
-  height: 700px;
-  }
-}
 
 .discount-box {
   display: flex;
@@ -84,7 +78,11 @@ align-items: center;
   box-shadow: 5px 5px 5px gray;
   transition: 0.3s;
 }
-.explore-btn {
+.shop-btn:active {
+  transform: scale(0.95);
+  box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.3);
+}
+  .explore-btn {
   font-size: 2rem;
   border: none;
   border-radius: 16px;
@@ -120,33 +118,33 @@ align-items: center;
 .sneaker-img {
   width:20%;
   position: absolute;
-  bottom: 27%;
-  right: 57%;
+  bottom: 33%;
+  left: 23%;
   transform: rotate(-10deg);
   filter: drop-shadow(20px 20px 20px rgba(0, 0, 0, 0.15));
 }
 
 .watch-img {
-  width: clamp(120px, 28%, 260px);
+  width:30%;
   position: absolute;
-  bottom: 39%;
+  top: 38%;
   right: 23%;
   transform: rotate(-10deg);
   filter: drop-shadow(20px 20px 20px rgba(0, 0, 0, 0.15));
 }
 .headphone-img {
-  width: clamp(90px, 18%, 170px);
+  width: 20%;
   position: absolute;
-  top: 11%;
+  top: 21%;
   right: 46%;
   transform: rotate(-10deg);
   filter: drop-shadow(20px 20px 20px rgba(0, 0, 0, 0.15));
 }
 .handbags-img {
-  width: clamp(140px, 31%, 300px);
+  width: 30%;
   position: absolute;
-  top: 34%;
-  right: 29.75%;
+  bottom: 13.5%;
+  right: 32%;
   filter: drop-shadow(20px 20px 20px rgba(0, 0, 0, 0.15));
 }
 
@@ -177,7 +175,9 @@ align-items: center;
 
 
 @media(max-width:767px){
-  .banner{
+   .banner{
+    width:95%;
+  height:min(700px);
   }
 .discount-box{
   display: flex;
@@ -222,20 +222,20 @@ align-items: center;
 }
 
 .sneaker-img {
-  bottom: 30%;
-  right: 57%;
+  bottom: 34%;
+  left: 23%;
 }
 .watch-img {
   bottom: 39%;
   right: 23%;
 }
 .headphone-img {
- top: 18%;
+ top: 22%;
   right: 46%;
 }
 .handbags-img {
-  bottom: 20%;
-  right: 29.75%;
+  bottom: 16%;
+  right: 33%;
 }
 
 
@@ -251,24 +251,25 @@ align-items: center;
   align-items: center;
   gap: 5rem;
   font-weight: bold;
-  margin: 1rem;
   margin-bottom:1rem;
   
 }
 .shop-mobile-btn {
-  font-size: 1em;
+  font-size: 2em;
   border: none;
   height: 5rem;
   width: 10rem;
   border-radius: 16px;
   background-color: #ffe5bf;
   color: black;
-  box-shadow: 5px 5px 5px gray;
+  box-shadow: 2px 2px 2px gray;
   transition: 0.3s;
 }
 .explore-mobile-btn {
-  font-size: 1em;
+  font-size: 2em;
   border: none;
+  height: 5rem;
+  width: 10rem;
   border-radius: 16px;
   background-color: #24b1b1;
   color: black;
@@ -278,6 +279,13 @@ align-items: center;
   display: none;
 }
 
+.slids{
+  left:45%
+}
+
+.slids button {
+  width: 4rem;
+}
 }
 
 
