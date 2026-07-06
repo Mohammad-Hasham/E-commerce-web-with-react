@@ -1,14 +1,11 @@
 
-import Hero from './Pages/Hero/Hero';
-
+import ProductGride from './components/Product/ProductGrid/productGrid'
 import './App.css'
 
 
 function App() {
   return (
- 
- 
-<Hero/>
+ <ProductGride/>
 
       
       

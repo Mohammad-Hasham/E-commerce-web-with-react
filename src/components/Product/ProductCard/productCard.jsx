@@ -10,6 +10,8 @@ import shose from '../../../assets/Images/product.png'
 function Cards (){
     const[products , setProducts] = useState([]);
 
+    const {id} = useParams();
+
 useEffect(()=>{
     fetch('https://dummyjson.com/products')
             .then(res=>res.json())            
@@ -18,7 +20,7 @@ useEffect(()=>{
                     console.error(erorr)
                 })
 
-},[])
+},[id])
 
 return(
 <>
@@ -36,7 +38,7 @@ const discount = product.price * 0.5;
  return(
 
     
-            <div className='product-card' key={product.id}>
+            <div className='product-card' key={product.id} product={product}>
 <img src={product.thumbnail} alt={product.title} />
 <div className='text-container'>
     <h3>{product.title}</h3>
