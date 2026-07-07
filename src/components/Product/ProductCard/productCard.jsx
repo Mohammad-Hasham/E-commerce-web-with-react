@@ -10,8 +10,6 @@ import shose from '../../../assets/Images/product.png'
 function Cards (){
     const[products , setProducts] = useState([]);
 
-    const {id} = useParams();
-
 useEffect(()=>{
     fetch('https://dummyjson.com/products')
             .then(res=>res.json())            
@@ -20,7 +18,7 @@ useEffect(()=>{
                     console.error(erorr)
                 })
 
-},[id])
+},[])
 
 return(
 <>

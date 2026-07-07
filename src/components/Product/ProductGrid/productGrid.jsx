@@ -4,7 +4,7 @@ function ProductGride(){
 
     return(
         <section className="product-list">
-<Cards product=(product)/>
+<Cards/>
         </section>
     )
 }
