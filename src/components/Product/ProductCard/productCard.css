@@ -16,7 +16,7 @@ html{
   display: flex;
   flex-direction: column ;
   padding: 10px;
-  background-color:rgb(195, 192, 192);
+  background-color:#fff2db;
   cursor: pointer;
   box-sizing: border-box;
   overflow: hidden;
@@ -45,7 +45,7 @@ img{
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
-  height: 60%;
+  height: 40%;
   padding: 20px;
   
 }
