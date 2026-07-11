@@ -10,8 +10,7 @@ html{
 
 
 .product-card{
-  height: 30rem;
-  width: 25rem;
+  width:95%;
   border-radius: 5px;
   display: flex;
   flex-direction: column ;
@@ -20,6 +19,8 @@ html{
   cursor: pointer;
   box-sizing: border-box;
   overflow: hidden;
+  background-position: center;
+  background-size: cover;
   
 }
 .text-container{
@@ -46,7 +47,6 @@ img{
   background-repeat: no-repeat;
   background-attachment: fixed;
   height: 40%;
-  padding: 20px;
   
 }
 .rating-star{

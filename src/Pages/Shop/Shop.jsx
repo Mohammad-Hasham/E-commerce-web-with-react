@@ -1,5 +1,6 @@
 import Cards from "../../components/Product/ProductCard/productCard"
 import Catiegorys from "../../components/Product/Catiegory/Catiegory"
+import ProductGride from "../../components/Product/ProductGrid/productGrid"
 import "./Shop.css"
 function Shop(){
 return(
@@ -8,8 +9,8 @@ return(
         <Catiegorys/>
     </aside>
 
-    <section className="product-list">
-        <Cards />
+    <section>
+    <product-list/>
     </section>
 </section>
 )
