@@ -1,14 +1,13 @@
 
-import ProductGride from './components/Product/ProductGrid/productGrid'
 import './App.css'
-import Shop from './Pages/Shop/Shop'
+
+import Wishlist from './Pages/Wishlist/Wishlist'
 
 
 function App() {
   return (
     <> 
-    
-  <ProductGride/>
+  <Wishlist/>
   </>
 
       
