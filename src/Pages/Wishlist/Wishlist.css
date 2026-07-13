@@ -12,9 +12,13 @@
 justify-content: space-evenly;
 align-items: center;
 width: 100%;
+border: 2px solid;
 }
 
 .wishlist-product{
     display: flex;
-    
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    border:2px solid
 }
