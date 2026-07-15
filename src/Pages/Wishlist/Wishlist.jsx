@@ -16,11 +16,19 @@ function Wishlist (){
 <p>Action</p>
 </div>
 <div className="wishlist-product">
+
+    <div className='product-detial'>
 <input type="checkbox" />
 <img src={smartWatch} alt="" />
 <p>jacket</p>
+</div>
+  <div className='quantity'>
+<button>+</button>
+<p>2</p>
+<button>-</button>
+    </div>
 <span>700$</span>
-<span> in Stock</span>
+<span>in Stock</span>
 <div className='wishlist-btn'>
 <button>Eye</button>
 <button>Add to Card</button>

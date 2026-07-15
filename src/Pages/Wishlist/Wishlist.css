@@ -10,7 +10,7 @@
 .wishlist-title{
     display:grid;
 grid-template-columns:
-50px
+20px
 3fr
 150px
 150px
@@ -22,16 +22,38 @@ padding:  0 10px;
 box-sizing: border-box;
 
 }
+.product-detial{
+display:flex;
+align-items: center;
+margin: 0 10px;
+}
 
 .wishlist-product{
-    display: flex;
-    justify-content: center;
+        display:grid;
+   grid-template-columns: 4fr 150px 150px 180px 220px;
     align-items: center;
-    gap: 20px;
     width: 100%;
     border:2px solid
 }
 
 img{
-    width:10%
+    width:20%
 }
+.quantity{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+
+.wishlist-btn{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 30px;
+}
+
+
+
+
+
