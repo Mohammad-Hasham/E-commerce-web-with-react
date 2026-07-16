@@ -5,6 +5,7 @@
     align-items: center;
     justify-content: center;
     flex-direction: column;
+    border: 1px solid;
 }
 
 .wishlist-title{
@@ -12,29 +13,37 @@
 grid-template-columns:
 20px
 3fr
+140px
 150px
-150px
-180px
+210px
 220px;
 width: 100%;
-border: 2px solid;
-padding:  0 10px;
 box-sizing: border-box;
+font-weight: bold;
 
 }
+
+
 .product-detial{
 display:flex;
 align-items: center;
-margin: 0 10px;
+gap: 10px;
+ 
 }
 
 .wishlist-product{
-        display:grid;
-   grid-template-columns: 4fr 150px 150px 180px 220px;
+    display:grid;
+   grid-template-columns: 3fr 1fr 1fr 1fr 2fr;
     align-items: center;
+    justify-content: center;
     width: 100%;
-    border:2px solid
+    box-sizing: border-box;
+    padding-right: 30px;
+    text-align: center;
+
 }
+
+
 
 img{
     width:20%
@@ -42,7 +51,19 @@ img{
 .quantity{
     display: flex;
     align-items: center;
+    justify-content: center;
+    text-align: center;
     gap: 10px;
+
+}
+.quantity button{
+    height: 30px;
+    font-size: 15px;
+}
+
+.quantity p{
+    width: 20px;
+    font-size: 15px;
 }
 
 
@@ -50,8 +71,25 @@ img{
     display:flex;
     align-items: center;
     justify-content: center;
-    margin-right: 30px;
+    gap: 10px;
+
 }
+.wishlist-btn button{
+    height: 40px;
+}
+
+
+
+
+
+.add-cart-btn{
+    width: 150px;
+    border: none;
+    background-color: black;
+    color: white;
+    border-radius: 4px;
+}
+
 
 
 
