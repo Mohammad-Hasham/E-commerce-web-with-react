@@ -10,7 +10,7 @@ import { useState } from "react";
 
 function Navbar() {
 const [isOpen , setIsOpen] = useState(false)
-
+const navigate = useNavigate();
 
   return (
     <nav className="navbar">
@@ -21,7 +21,7 @@ const [isOpen , setIsOpen] = useState(false)
         <BiSearch className="search-tag"/>
         </div>
         <div className="add-list">
-          <BiHeart/>
+          <BiHear/>
           <BiCartAdd/>
           <AiOutlineBars className="outline-bar" onClick={()=> setIsOpen(true)}/>
         </div>
