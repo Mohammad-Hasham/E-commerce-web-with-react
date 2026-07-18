@@ -6,17 +6,12 @@ import {useState} from "react"
 import Shop from '../Shop/Shop'
 
 
-function Wishlist ({wishlist, removeFromWishlist}){
+function Wishlist ({wishlist, removeFromWishlist,increament}){
 
-
-
-function increament (){
-setQuantity( quantity + 1)
-}
 
 function decreament (){
     if (quantity > 1 ){
-setQuantity(quantity - 1)
+quantity(quantity - 1)
     }
 
 }
@@ -47,18 +42,18 @@ setQuantity(quantity - 1)
 <p>{product.title}</p>
 </div>
   <div className='quantity'>
-<button onClick={increament}>+</button>
+<button onClick={()=> increament(product.id)}>+</button>
 <p>{product.quantity}</p>
 <button onClick={decreament}>–</button>
     </div>
-    <span className='price'>{`$${product.price * product.quantity}`}</span>
+    <span className='price'>{`$${product.price.toFixed(2) * product.quantity}`}</span>
 <span className='stock'>in Stock</span>
 
 
 <div className='wishlist-btn'>
 <button><FaRegEye/></button>
 <button className='add-cart-btn'>Add to Cart</button>
-<button onClick={() => removeFromWishlist (products.id)}><FaTrash/></button>
+<button onClick={() => removeFromWishlist (product.id)}><FaTrash/></button>
 </div>
 </div>
 ))}

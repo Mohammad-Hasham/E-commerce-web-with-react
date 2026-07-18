@@ -13,8 +13,17 @@ function Shop(){
             return prev;
         }
 
-        return [...prev , product]
+        return [...prev, {...product, quantity : 1}]
         });
+    }
+    function increament (id){
+        setWishlist(prev => 
+            prev.map(item => 
+                item.id === id
+                ? {...item, quantity: item.quantity + 1}
+                : item
+            )
+        );
     }
 
       const removeFromWishlist = (id) => {
@@ -24,7 +33,7 @@ function Shop(){
     };
 return(
 <>
- <Wishlist wishlist={wishlist} removeFromWishlist ={removeFromWishlist}/>
+ <Wishlist wishlist={wishlist} removeFromWishlist ={removeFromWishlist} increament={increament}/>
  <Cards addToWishlist={addToWishlist} />
 
 </>

@@ -3,7 +3,6 @@ import './productCard.css'
 import { FaHeart, FaStar, } from "react-icons/fa";
 import { FaStarHalfAlt } from 'react-icons/fa';
 import { FaRegStar } from 'react-icons/fa';
-import shose from '../../../assets/Images/product.png'
 import Shop from '../../../Pages/Shop/Shop';
 
 
