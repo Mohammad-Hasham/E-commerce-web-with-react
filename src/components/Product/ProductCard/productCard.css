@@ -10,7 +10,7 @@ html{
 
 
 .product-card{
-  width:95%;
+  width:300px;
   border-radius: 5px;
   display: flex;
   flex-direction: column ;
@@ -21,6 +21,7 @@ html{
   overflow: hidden;
   background-position: center;
   background-size: cover;
+  margin: 10px;
   
 }
 .text-container{

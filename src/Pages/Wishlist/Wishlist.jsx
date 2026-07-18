@@ -50,7 +50,7 @@ function removeProduct(id){
     <section className="wishlist">
 <h2>My Wishlist</h2>
 <div className="wishlist-title ">
-<input type="checkbox" />
+<input type="checkbox"className='header-check' />
 <p>Product</p>
 <p>Quantity</p>
 <p>Unite price</p>
@@ -59,18 +59,21 @@ function removeProduct(id){
 </div>
 {product.map((products) =>(
 <div className="wishlist-product" key={products.id} product={product}>
+    <input type="checkbox" />
 <div className='product-detial'>
-<input type="checkbox" />
+
 <img src={smartWatch} alt="" />
 <p>{products.name}</p>
 </div>
   <div className='quantity'>
 <button onClick={increament}>+</button>
-<p>{}</p>
-<button onClick={decreament}>-</button>
+<p>{quantity}</p>
+<button onClick={decreament}>–</button>
     </div>
-<span className='price'>{`$${products.price * quantity}`}</span>
+    <span className='price'>{`$${products.price * quantity}`}</span>
 <span className='stock'>in Stock</span>
+
+
 <div className='wishlist-btn'>
 <button><FaRegEye/></button>
 <button className='add-cart-btn'>Add to Cart</button>
