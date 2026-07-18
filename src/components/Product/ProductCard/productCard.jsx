@@ -1,13 +1,14 @@
 import { useState,useEffect } from 'react'
 import './productCard.css'
-import { FaStar, } from "react-icons/fa";
+import { FaHeart, FaStar, } from "react-icons/fa";
 import { FaStarHalfAlt } from 'react-icons/fa';
 import { FaRegStar } from 'react-icons/fa';
 import shose from '../../../assets/Images/product.png'
+import Shop from '../../../Pages/Shop/Shop';
 
 
 
-function Cards (){
+function Cards ({addToWishlist}){
     const[products , setProducts] = useState([]);
 
 useEffect(()=>{
@@ -37,7 +38,13 @@ const discount = product.price * 0.5;
 
     
             <div className='product-card' key={product.id} product={product}>
-<img src={product.thumbnail} alt={product.title} />
+                <div className='img-whishlist'>
+                    <img src={product.thumbnail} alt={product.title} />
+
+                     <button className='heart' onClick={() =>addToWishlist (product)}><FaHeart/></button>
+                </div>
+              
+
 <div className='text-container'>
     <h3>{product.title}</h3>
 <div className='price'>

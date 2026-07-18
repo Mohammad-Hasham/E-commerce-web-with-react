@@ -1,18 +1,33 @@
 import Cards from "../../components/Product/ProductCard/productCard"
-import Catiegorys from "../../components/Product/Catiegory/Catiegory"
-import ProductGride from "../../components/Product/ProductGrid/productGrid"
-import "./Shop.css"
+import Wishlist from "../Wishlist/Wishlist"
+import {useState} from "react"
 function Shop(){
-return(
-    <section className="shop-container">
-    <aside className="categories">
-        <Catiegorys/>
-    </aside>
 
-    <section>
-    <product-list/>
-    </section>
-</section>
+    const[wishlist, setWishlist] = useState([])
+
+
+    const addToWishlist = (product) => {
+        setWishlist((prev) => {
+        const exists = prev.find ((item) => item.id === product.id);
+        if(exists){
+            return prev;
+        }
+
+        return [...prev , product]
+        });
+    }
+
+      const removeFromWishlist = (id) => {
+        setWishlist(prev =>
+            prev.filter(item => item.id !== id)
+        );
+    };
+return(
+<>
+ <Wishlist wishlist={wishlist} removeFromWishlist ={removeFromWishlist}/>
+ <Cards addToWishlist={addToWishlist} />
+
+</>
 )
 }
 
