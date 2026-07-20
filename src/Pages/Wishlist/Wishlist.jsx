@@ -26,7 +26,6 @@ quantity(quantity - 1)
     <section className="wishlist">
 <h2>My Wishlist</h2>
 <div className="wishlist-title ">
-<input type="checkbox"className='header-check' />
 <p>Product</p>
 <p>Quantity</p>
 <p>Unite price</p>
@@ -35,7 +34,6 @@ quantity(quantity - 1)
 </div>
 {wishlist.map((product) =>(
 <div className="wishlist-product" key={product.id}>
-    <input type="checkbox" />
 <div className='product-detial'>
 
 <img src={product.thumbnail} alt="" />
@@ -47,7 +45,9 @@ quantity(quantity - 1)
 <button onClick={decreament}>–</button>
     </div>
     <span className='price'>{`$${product.price.toFixed(2) * product.quantity}`}</span>
-<span className='stock'>in Stock</span>
+<span className={product.stock >= 20 ? "green" : "red"}>
+    {product.stock >= 20 ? "In Stock" : "Low Stock"}
+</span>
 
 
 <div className='wishlist-btn'>

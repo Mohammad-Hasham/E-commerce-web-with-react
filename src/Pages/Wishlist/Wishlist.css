@@ -17,12 +17,8 @@
 .wishlist-title{
     display:grid;
 grid-template-columns:
-13px
 3fr
-150px 
-170px 
-150px
-200px;
+1fr 1.13fr 1fr 1.33fr;
 width: 100%;
 gap: 20px;
 box-sizing: border-box;
@@ -41,7 +37,12 @@ padding: 0 10px;
     padding: 20px 0;
     margin-bottom: 10px;
 }
-
+.red{
+    color: red;
+}
+.green{
+    color: green;
+}
 
 
 
@@ -50,7 +51,7 @@ padding: 0 10px;
 
 .wishlist-product{
     display:grid;
-   grid-template-columns:  13px 3fr 160px 180px 200px 220px ;
+   grid-template-columns:  3fr 30% 12% 19% 22% ;
     align-items: center;
     justify-content: center;
     width: 100%;
@@ -113,6 +114,18 @@ img{
     color: white;
     border-radius: 4px;
 }
+
+
+
+@media(max-width:500px)and (min-width: 250px){
+    .wishlist{
+        display: flex;
+        flex-direction: row;
+    }
+}
+
+
+
 
 
 
