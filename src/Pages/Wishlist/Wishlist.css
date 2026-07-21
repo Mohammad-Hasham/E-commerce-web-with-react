@@ -51,7 +51,7 @@ padding: 0 10px;
 
 .wishlist-product{
     display:grid;
-   grid-template-columns:  3fr 30% 12% 19% 22% ;
+   grid-template-columns:   3fr 1.9fr 1fr 1.2fr 2.2fr;
     align-items: center;
     justify-content: center;
     width: 100%;
@@ -116,13 +116,19 @@ img{
 }
 
 
+/* Responsive for tablet */
 
-@media(max-width:500px)and (min-width: 250px){
-    .wishlist{
-        display: flex;
-        flex-direction: row;
-    }
+
+@media(max-width:992px)and (min-width: 768px){
+    
+    .wishlist-title{
+    display:grid;
+grid-template-columns:
+3fr
+1fr 1fr 1fr 1fr;
 }
+}
+
 
 
 

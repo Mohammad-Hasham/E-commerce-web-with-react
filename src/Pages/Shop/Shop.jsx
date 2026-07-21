@@ -33,9 +33,10 @@ function Shop(){
     };
 return(
 <>
+
  <Wishlist wishlist={wishlist} removeFromWishlist ={removeFromWishlist} increament={increament}/>
  
-
+<Cards addToWishlist={addToWishlist}/>
 </>
 )
 }

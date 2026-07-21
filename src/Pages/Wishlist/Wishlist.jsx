@@ -36,7 +36,7 @@ quantity(quantity - 1)
 <div className="wishlist-product" key={product.id}>
 <div className='product-detial'>
 
-<img src={product.thumbnail} alt="" />
+<img className='wishlist-img' src={product.thumbnail} alt="" />
 <p>{product.title}</p>
 </div>
   <div className='quantity'>
