@@ -11,19 +11,21 @@
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    border: 1px solid;
+    
 }
 
 .wishlist-title{
     display:grid;
+    gap: 20px;
 grid-template-columns:
 3fr
-1fr 1.13fr 1fr 1.33fr;
+1fr 1.13fr 1fr 1.6fr;
 width: 100%;
 gap: 20px;
 box-sizing: border-box;
 align-items: center;
 font-weight: bold;
+text-align: center;
 font-size: 15px;
 padding: 0 10px;
 
@@ -39,19 +41,28 @@ padding: 0 10px;
 }
 .red{
     color: red;
+    text-align: center;
 }
 .green{
     color: green;
+    text-align: center;
+    
 }
 
 
+.price{
+    
+display: flex;
+justify-content: center;
+}
+    
 
  
 
 
 .wishlist-product{
     display:grid;
-   grid-template-columns:   3fr 1.9fr 1fr 1.2fr 2.2fr;
+   grid-template-columns:   3fr 1.7fr 1fr 1.4fr 1.8fr;
     align-items: center;
     justify-content: center;
     width: 100%;
@@ -68,7 +79,7 @@ align-items: center;
 justify-content: flex-start;
 
 }
-img{
+.wishlist-img{
     width:20%;
 }
 .quantity{
@@ -77,6 +88,7 @@ img{
     justify-content: center;
     text-align: center;
     gap: 10px;
+    
 
 }
 .quantity button{
@@ -97,10 +109,12 @@ img{
     align-items: center;
     justify-content: center;
     gap: 10px;
+    
 
 }
 .wishlist-btn button{
     height: 25px;
+   
 }
 
 
@@ -119,17 +133,63 @@ img{
 /* Responsive for tablet */
 
 
-@media(max-width:992px)and (min-width: 768px){
+@media(max-width:1023px)and (min-width: 768px){
     
     .wishlist-title{
     display:grid;
 grid-template-columns:
-3fr
-1fr 1fr 1fr 1fr;
+2.5fr
+1fr 1fr 1fr 1.2fr;
+gap: 10px;
 }
+.wishlist-product{
+    gap: 10px;
+       grid-template-columns:   2.5fr 1.5fr 1fr 1.2fr 1fr;
+}
+
+.add-cart-btn{
+    width: 80px;
+}
+
 }
 
 
+/*Resposive for Phones */
+
+@media (max-width:767px) and (min-width: 320px){
+    .wishlist-title{
+        display: none;
+    }
+    .wishlist-product{
+        display: grid;
+        grid-template-columns: 1.5fr 1fr ;
+        margin: 10px;
+        
+    }
+
+    .wishlist-btn{
+     grid-column: 1 / -1;  
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+    
+    }
+
+    .wishlist-btn button{
+    height: 25px;
+
+
+}
+
+.add-cart-btn{
+    width: 200px;
+}
+
+
+
+
+}
 
 
 
