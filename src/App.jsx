@@ -1,9 +1,6 @@
 
 import './App.css'
-import Navbar from './components/layout/Navbar/Navbar'
-import Cards from "./components/Product/ProductCard/productCard.jsx"
-import Shop from './Pages/Shop/Shop.jsx';
-import Wishlist from './Pages/Wishlist/Wishlist'
+import Cart from './Pages/Cart/Cart';
 
 
   function App() {
@@ -12,7 +9,7 @@ import Wishlist from './Pages/Wishlist/Wishlist'
   return (
     <>
     
-    <Shop/>
+  <Cart/>
     
     </>
   );
