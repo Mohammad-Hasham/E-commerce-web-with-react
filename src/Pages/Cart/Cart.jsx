@@ -1,8 +1,12 @@
 function Cart (){
     return(
-<div>
 
-</div>
+
+        <section>
+            <p>
+                <a href=""></a>
+            </p>
+        </section>
     )
 }
 
