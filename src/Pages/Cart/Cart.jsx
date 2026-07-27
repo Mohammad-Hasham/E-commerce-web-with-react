@@ -4,8 +4,12 @@ function Cart (){
 
         <section>
             <p>
-                <a href=""></a>
+        
             </p>
+
+            <div>
+                <h1>hello wolrd </h1>
+            </div>
         </section>
     )
 }
