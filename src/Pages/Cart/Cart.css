@@ -1,0 +1,39 @@
+.cart-page{
+width: 95%;
+margin: 0;
+padding: 0;
+display:flex;
+justify-content: center;
+flex-direction: column;
+
+}
+
+.cart-rate{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    
+}
+
+.cart-rang{
+    display: flex;
+    
+}
+.cart-header{
+    display:grid;
+    grid-template-columns: 3fr 1fr 1fr 1fr ;
+
+}
+
+.cart-products{
+    display:grid;
+    grid-template-columns: 2fr  1fr 1fr 1fr 1fr ;
+    justify-content: center;
+    align-items: center;
+}
+.cart-img{
+    width: 40%;
+}
+
+

@@ -27,10 +27,8 @@ function Shop(){
     }
 
       const removeFromWishlist = (id) => {
-        setWishlist(prev =>
-            prev.filter(item => item.id !== id)
-        );
-    };
+                setWishlist(prev => prev.filter(item => item.id !== id));
+        };
 return(
 <>
 

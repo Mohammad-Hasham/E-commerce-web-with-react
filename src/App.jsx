@@ -8,9 +8,7 @@ import Cart from './Pages/Cart/Cart';
 
   return (
     <>
-    
   <Cart/>
-    
     </>
   );
 }
