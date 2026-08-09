@@ -1,10 +1,11 @@
 import Cards from "../../components/Product/ProductCard/productCard"
 import Wishlist from "../Wishlist/Wishlist"
 import {useState} from "react"
+
+
 function Shop(){
 
-    const[wishlist, setWishlist] = useState([])
-
+    const[wishlist, setWishlist] = useState([]);
 
     const addToWishlist = (product) => {
         setWishlist((prev) => {

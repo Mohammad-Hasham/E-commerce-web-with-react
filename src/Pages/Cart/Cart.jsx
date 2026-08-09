@@ -1,25 +1,33 @@
 import "./Cart.css";
+import Wishlist from "../Wishlist/Wishlist";
 import watch from "../../assets/Images/smartWatch.png";
 
-function Cart() {
+function Cart(cart) {
+
   return (
     <section className="cart-page">
       <h1>Shopping Cart</h1>
       <div className="cart-rate">
-        <p>
+        <p className="dicout-text">
           Greate! you have been <span>Free shopping</span> only 14.25$ away from
-          getting 3% cashBack
+           getting <span> 3% cashBack</span>
         </p>
         <div className="cart-rang">
           <p>80$</p>
-          <input type="range" name="" id="" />
+          <input type="range" name="" id="" className="rang" />
           <p>120$</p>
         </div>
-        <p className="free-shiping">free Shipping </p>
-        <p>3% Cash Back</p>
+        <div className="dicount">
+        <p className="free-shiping">Free Shipping </p>
+        <p className="cashback">3% Cash Back</p>
+        </div>
       </div>
 
       <div className="cart-products-details">
+        <div className="order-detial">
+          <p>you have 3 products on your cart</p>
+          <p>Exept Delivry days:<span className="days">Friday</span></p>
+        </div>
         <div className="cart-header">
           <p>product</p>
           <p>Price</p>
@@ -27,12 +35,10 @@ function Cart() {
           <p>Total</p>
         </div>
         <div className="cart-products">
-          <div>
+          <div className="product-name">
             <img src={watch} alt="" className="cart-img" />
-            <p>apple watch serie 7</p>
+            <p>{}</p>
           </div>
-          <img src={watch} alt="" className="cart-img" />
-          <p>apple watch serie 7</p>
           <p>stock</p>
           <p>$20.22</p>
           <div className="cart-quantity">

@@ -7,7 +7,7 @@ import Shop from '../../../Pages/Shop/Shop';
 
 
 
-function Cards ({addToWishlist}){
+function Cards ({addToWishlist,addToCart}){
     const[products , setProducts] = useState([]);
 
 useEffect(()=>{
@@ -40,7 +40,7 @@ const discount = product.price * 0.5;
                 <div className='img-whishlist'>
                     <img src={product.thumbnail} alt={product.title} />
 
-                     <button className='heart' onClick={() =>addToWishlist (product)}><FaHeart/></button>
+                     <button className='heart' onClick={() => addToWishlist(product)}><FaHeart/></button>
                 </div>
               
 

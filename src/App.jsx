@@ -1,6 +1,7 @@
 
 import './App.css'
 import Cart from './Pages/Cart/Cart';
+import Shop from './Pages/Shop/Shop';
 
 
   function App() {
@@ -8,7 +9,7 @@ import Cart from './Pages/Cart/Cart';
 
   return (
     <>
-  <Cart/>
+  <Shop/>
     </>
   );
 }
