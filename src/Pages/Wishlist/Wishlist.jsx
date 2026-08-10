@@ -5,6 +5,7 @@ import {FaTrash} from "react-icons/fa"
 import {useState} from "react"
 import Shop from '../Shop/Shop'
 import Cart from '../Cart/Cart'
+import { jsx } from 'react/jsx-runtime'
 
 function Wishlist ({wishlist, removeFromWishlist,increament}){
 
@@ -52,3 +53,4 @@ function Wishlist ({wishlist, removeFromWishlist,increament}){
 }
 
 export default Wishlist
+
