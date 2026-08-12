@@ -1,8 +1,9 @@
 import "./Cart.css";
 import Wishlist from "../Wishlist/Wishlist";
 import watch from "../../assets/Images/smartWatch.png";
+import Shop from "../Shop/Shop";
 
-function Cart(cart) {
+function Cart({cart,increament,decreament}) {
 
   return (
     <section className="cart-page">
@@ -34,20 +35,22 @@ function Cart(cart) {
           <p>Quantity</p>
           <p>Total</p>
         </div>
-        <div className="cart-products">
+         {cart.map((product) => (
+          <div className="cart-products" key={product.id}>
           <div className="product-name">
-            <img src={watch} alt="" className="cart-img" />
-            <p>{}</p>
+            <img src={product.thumbnail} alt={product.title} className="cart-img" />
+            <p>{product.title}</p>
           </div>
-          <p>stock</p>
-          <p>$20.22</p>
+          <p>{product.stock}</p>
+          <p>{product.price}</p>
           <div className="cart-quantity">
-            <button>+</button>
-            <p>n</p>
-            <button>-</button>
+            <button onClick={()=>increament(product)}>+</button>
+            <p>{product.quantity}</p>
+            <button onClick={() => decreament(product)}>-</button>
           </div>
-          <p>$120.22</p>
+          <p>${product.quantity *product.price}</p>
         </div>
+         ))}
       </div>
     </section>
   );

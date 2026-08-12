@@ -38,9 +38,10 @@ const discount = product.price * 0.5;
     
             <div className='product-card' key={product.id} product={product}>
                 <div className='img-whishlist'>
-                    <img src={product.thumbnail} alt={product.title} />
+                    <button onClick={() => addToCart(product)}>add Cart</button>
+                    <img className='productcard-img' src={product.thumbnail} alt={product.title} />
 
-                     <button className='heart' onClick={() => addToWishlist(product)}><FaHeart/></button>
+                     <button className='heart' onClick={()=> addToWishlist(product)}><FaHeart/></button>
                 </div>
               
 

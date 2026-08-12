@@ -45,7 +45,6 @@ margin: 10px 0;
 display: flex;
 align-items: flex-start;
 justify-content: flex-end;
-border: 1px solid;
 }
 .heart{
 cursor: pointer;
@@ -53,9 +52,10 @@ width:20px;
 background: none;
 border: none;
 }
-img{
-  align-self: center;
+.productcard-img{
+  width: 50%;
   justify-self: center;
+  
 }
 
   

@@ -5,9 +5,8 @@ import {FaTrash} from "react-icons/fa"
 import {useState} from "react"
 import Shop from '../Shop/Shop'
 import Cart from '../Cart/Cart'
-import { jsx } from 'react/jsx-runtime'
 
-function Wishlist ({wishlist, removeFromWishlist,increament}){
+function Wishlist ({wishlist, removeFromWishlist,increament , decreament,addToCart}){
 
 
     return(
@@ -30,9 +29,9 @@ function Wishlist ({wishlist, removeFromWishlist,increament}){
   <div className='quantity'>
 <button onClick={()=> increament(product.id)}>+</button>
 <p>{product.quantity}</p>
-<button onClick={decreament}>–</button>
+<button onClick={()=>decreament(product)}>–</button>
     </div>
-    <span className='price'>{`$${product.price.toFixed(2) * product.quantity}`}</span>
+    <span className='price'>{product.price.toFixed(2) * product.quantity}</span>
 <span className={product.stock >= 20 ? "green" : "red"}>
     {product.stock >= 20 ? "In Stock" : "Low Stock"}
 </span>
@@ -40,7 +39,7 @@ function Wishlist ({wishlist, removeFromWishlist,increament}){
 
 <div className='wishlist-btn'>
 <button><FaRegEye/></button>
-<button className='add-cart-btn'>Add to Cart</button>
+<button className='add-cart-btn' onClick={()=>addToCart(product),() => removeFromWishlist (product.id)}>Add to Cart</button>
 <button onClick={() => removeFromWishlist (product.id)}><FaTrash/></button>
 </div>
 </div>
