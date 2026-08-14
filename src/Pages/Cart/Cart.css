@@ -133,3 +133,10 @@ span{
     background: none;
     cursor: pointer;
 }
+
+.S-green{
+color: green;
+}
+.S-red{
+  color: red;
+}

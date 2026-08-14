@@ -39,7 +39,7 @@ function Wishlist ({wishlist, removeFromWishlist,increament , decreament,addToCa
 
 <div className='wishlist-btn'>
 <button><FaRegEye/></button>
-<button className='add-cart-btn' onClick={()=>addToCart(product),() => removeFromWishlist (product.id)}>Add to Cart</button>
+<button className='add-cart-btn' onClick={()=>{addToCart(product); removeFromWishlist (product.id)}}>Add to Cart</button>
 <button onClick={() => removeFromWishlist (product.id)}><FaTrash/></button>
 </div>
 </div>

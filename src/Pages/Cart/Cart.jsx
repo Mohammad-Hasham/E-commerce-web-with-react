@@ -3,7 +3,7 @@ import Wishlist from "../Wishlist/Wishlist";
 import watch from "../../assets/Images/smartWatch.png";
 import Shop from "../Shop/Shop";
 
-function Cart({cart,increament,decreament}) {
+function Cart({cart,increamentCart,decreamentCart}) {
 
   return (
     <section className="cart-page">
@@ -15,7 +15,10 @@ function Cart({cart,increament,decreament}) {
         </p>
         <div className="cart-rang">
           <p>80$</p>
-          <input type="range" name="" id="" className="rang" />
+          <input type="range" name="" id="" className="rang"
+          min={0}
+          max={300}
+          readOnly/>
           <p>120$</p>
         </div>
         <div className="dicount">
@@ -41,14 +44,14 @@ function Cart({cart,increament,decreament}) {
             <img src={product.thumbnail} alt={product.title} className="cart-img" />
             <p>{product.title}</p>
           </div>
-          <p>{product.stock}</p>
-          <p>{product.price}</p>
+          <p  className={product.stock >= 20 ? "S-green" : "S-red"}>{product.stock >= 20 ? "InStock" : "LowStock"}</p>
+          <p>${product.price}</p>
           <div className="cart-quantity">
-            <button onClick={()=>increament(product)}>+</button>
+            <button onClick={()=>increamentCart(product.id)}>+</button>
             <p>{product.quantity}</p>
-            <button onClick={() => decreament(product)}>-</button>
+            <button onClick={() => decreamentCart(product.id)}>-</button>
           </div>
-          <p>${product.quantity *product.price}</p>
+          <p>${product.quantity *product.price.toFixed(2)}</p>
         </div>
          ))}
       </div>

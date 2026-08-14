@@ -16,7 +16,29 @@ function Shop(){
             }
             return [...prev, {...product, quantity : 1}]
         });
+    };
+
+       function increamentCart (id){
+        setCart(prev => 
+            prev.map(item => 
+                item.id === id
+                ? {...item, quantity: item.quantity + 1}
+                : item
+            )
+        );
     }
+
+    function decreamentCart (id){
+        setCart(prev => prev.map(
+            item => item.id === id 
+            ? {...item, quantity: item.quantity - 1}
+            : item
+        )
+    );
+    }
+
+
+    
 
     const[wishlist, setWishlist] = useState([]);
 
@@ -58,7 +80,7 @@ return(
  <Wishlist wishlist={wishlist} removeFromWishlist ={removeFromWishlist} increament={increament} decreament={decreament} addToCart={addToCart}/>
  
 <Cards addToWishlist={addToWishlist} addToCart={addToCart}/>
-<Cart cart={cart} increament={increament} decreament={decreament}/>
+<Cart cart={cart} increamentCart={increamentCart} decreamentCart={decreamentCart}/>
 </>
 )
 }
