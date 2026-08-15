@@ -18,7 +18,7 @@ function Cart({cart,increamentCart,decreamentCart}) {
           <input type="range" name="" id="" className="rang"
           min={0}
           max={300}
-          readOnly/>
+          />
           <p>120$</p>
         </div>
         <div className="dicount">
