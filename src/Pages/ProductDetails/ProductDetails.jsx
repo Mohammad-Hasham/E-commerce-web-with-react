@@ -30,8 +30,6 @@ function ProductDetails (){
                 <dt>black</dt>
 
 
-
-                <div> hello</div>
                 
                 </dl>
             </div>
