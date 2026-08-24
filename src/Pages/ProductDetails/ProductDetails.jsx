@@ -30,7 +30,6 @@ function ProductDetails (){
                 <dt>black</dt>
 
 
-                <dt><button></button></dt>
                 </dl>
             </div>
 
