@@ -28,7 +28,7 @@ function ProductDetails (){
 
                 <dd>Color:</dd>
                 <dt>black</dt>
-                <div></div>
+                
 
                 </dl>
             </div>
