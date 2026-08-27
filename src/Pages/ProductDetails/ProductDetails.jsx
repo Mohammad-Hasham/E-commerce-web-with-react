@@ -28,7 +28,7 @@ function ProductDetails (){
 
                 <dd>Color:</dd>
                 <dt>black</dt>
-                
+                {/* start  */}
 
                 </dl>
             </div>
