@@ -37,7 +37,7 @@ function ProductDetails() {
         </div>
       </div>
       <div>
-        {/* hi */}
+        <div></div>
     
       </div>
     </section>
