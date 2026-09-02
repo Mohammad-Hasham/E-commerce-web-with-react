@@ -1,0 +1,25 @@
+.product-details{
+    display: grid;
+    grid-template-columns:200px 1fr 1fr 
+}
+
+.imges-slide{
+    
+}
+
+
+
+
+
+
+
+
+.product-details-img{
+    background-color: beige;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.product-detail-img{
+    width: 100%;
+}
