@@ -4,22 +4,13 @@ import { FaHeart, FaStar, } from "react-icons/fa";
 import { FaStarHalfAlt } from 'react-icons/fa';
 import { FaRegStar } from 'react-icons/fa';
 import Shop from '../../../Pages/Shop/Shop';
+import UseProductCards from '../../../Hooks/useProduct';
 
 
 
 function Cards ({addToWishlist,addToCart}){
-    const[products , setProducts] = useState([]);
 
-useEffect(()=>{
-    fetch('https://dummyjson.com/products')
-            .then(res=>res.json())            
-            .then(data => setProducts(data.products))
-                .catch((erorr) => {
-                    console.error(erorr)
-                })
-
-},[])
-
+const products = UseProductCards()
 return(
 <>
 {products.slice(0,12).map((product) =>{

@@ -4,8 +4,12 @@ import { RiSecurePaymentFill } from "react-icons/ri";
 import { FaClockRotateLeft } from "react-icons/fa6";
 import "./ProductDetails.css"
 import headPhoneimg from "../../assets/images/headPhone.png"
+import { useState } from "react";
+
 
 function ProductDetails() {
+const slideImg =  [1,2,3,4];
+const [selectedImg, setSelectedImg] = useState(slideImg[0])
 
 
   
