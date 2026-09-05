@@ -13,7 +13,7 @@ import ProductDetails from "./Pages/ProductDetails/ProductDetails.jsx"
 
   return (
     <>
-    <Shop/>
+    <ProductDetails/>
     </>
   );
 }

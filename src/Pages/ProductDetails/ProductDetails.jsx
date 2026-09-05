@@ -1,7 +1,7 @@
 import { FaTruck } from "react-icons/fa";
 import { FaClock } from "react-icons/fa";
 import { RiSecurePaymentFill } from "react-icons/ri";
-import { FaClockRotateLeft } from "react-icons/fa6";
+import { FaClockRotateLeft, FaStarHalfStroke } from "react-icons/fa6";
 import "./ProductDetails.css"
 import headPhoneimg from "../../assets/images/headPhone.png"
 import { useState } from "react";
@@ -22,10 +22,12 @@ const [selectedImg, setSelectedImg] = useState(slideImg[0])
         <img src={headPhoneimg} alt=""  className="product-detail-img"/>
       </div>
       <div className="product-details-informations">
-        <h2> product name </h2>
-        <div className="product-information-rate"></div>
+        <h2 className="product-details-name ">Headphone</h2>
+        <div className="product-information-rate">
+          <span>{FaStarHalfStroke}</span>
+        </div>
         <div className="product-information-price"></div>
-        <p></p>
+        <p>description</p>
         <dl className="products-informations-deals">
           <dd>Brand:</dd>
           <dt>Sumsung</dt>

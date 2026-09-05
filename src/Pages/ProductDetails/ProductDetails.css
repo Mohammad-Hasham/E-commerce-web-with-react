@@ -23,3 +23,11 @@
 .product-detail-img{
     width: 100%;
 }
+
+
+.products-informations-deals{
+    display:grid;
+    grid-template-columns: 100px 100px ;
+    font-size: 15px;
+    row-gap: 20px;
+}
