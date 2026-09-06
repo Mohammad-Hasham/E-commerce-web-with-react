@@ -5,6 +5,8 @@ import { FaClockRotateLeft, FaStarHalfStroke } from "react-icons/fa6";
 import "./ProductDetails.css"
 import headPhoneimg from "../../assets/images/headPhone.png"
 import { useState } from "react";
+import { FaStar, } from "react-icons/fa";
+import { CiHeart } from "react-icons/ci";
 
 
 function ProductDetails() {
@@ -22,12 +24,30 @@ const [selectedImg, setSelectedImg] = useState(slideImg[0])
         <img src={headPhoneimg} alt=""  className="product-detail-img"/>
       </div>
       <div className="product-details-informations">
-        <h2 className="product-details-name ">Headphone</h2>
+        <h2 className="product-details-name"> Wirless Headphone</h2>
         <div className="product-information-rate">
-          <span>{FaStarHalfStroke}</span>
+          <span>
+            <FaStar/>
+            <FaStar/>
+            <FaStar/>
+            <FaStar/>
+            <FaStar/>
+          
+          
+          
+          
+          
+          </span>
+         
+          <p>(128 review)</p>
         </div>
-        <div className="product-information-price"></div>
-        <p>description</p>
+        <div className="product-information-price">
+        <p>$59.00</p>
+        <p>%99.99</p>
+        <p>40% OFF</p>
+        </div>
+        
+        <p className="productDetails-text">High-quality wirless HeadPhone with noise cancelation deeep cose and long battery life</p>
         <dl className="products-informations-deals">
           <dd>Brand:</dd>
           <dt>Sumsung</dt>
@@ -43,37 +63,38 @@ const [selectedImg, setSelectedImg] = useState(slideImg[0])
 
           <dd>Quantity</dd>
           <dt>
-            <div>
+            <div className="quantity-btn">
               <button>-</button>
               <p>1</p>
               <button>+</button>
             </div>
           </dt>
         </dl>
-        <div>
+        <div className="add-or-buy">
           <button>Add to Cart</button>
           <button>Buy Now</button>
-          <p>Add to Wishlist</p>
+         
         </div>
+         <p className="productDetails-addToWishlist"><CiHeart/>Add to Wishlist</p>
       </div>
       <div className="features">
         <div className="icons">
-          <span>{FaTruck}</span>
+          <span><FaTruck/></span>
           <div>
             <h5>Free Shoppoing</h5>
             <p>On order over 50$</p>
           </div>
-          <span>{FaClock}</span>
+          <span><FaClock/></span>
           <div>
             <h5>3o Days Resturns</h5>
             <p>Money back Gruntees</p>
           </div>
-          <span>{RiSecurePaymentFill}</span>
+          <span><RiSecurePaymentFill/></span>
           <div>
             <h5>Secure Paymen</h5>
             <p>100% secure payment</p>
           </div>
-          <span>{FaClockRotateLeft}</span>
+          <span><FaClockRotateLeft/></span>
           <div>
             <h5>24/7 Support</h5>
             <p>Dedcated Support</p>
