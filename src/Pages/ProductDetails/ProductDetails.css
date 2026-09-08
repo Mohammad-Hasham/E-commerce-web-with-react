@@ -1,8 +1,10 @@
+.product-details-page{
+max-width: 95%;
+}
+
 .product-details{
     display: grid;
-    grid-template-columns:200px 1fr 1fr ;
-    max-width: 1200px;
-    justify-content: center;
+    grid-template-columns:200px 1fr 1fr 
 }
 
 .imges-slide{
@@ -154,4 +156,27 @@
 .productDetails-addToWishlist{
     font-size: 16px;
     cursor: pointer;
+}
+
+.features{
+    display:flex;
+justify-content: space-around;
+align-items: center;
+    width: 100%;
+    margin: 50px;
+}
+
+.icons{
+    display: flex;
+    align-items: center;
+    font-size: 16px;
+
+
+    
+}
+
+.icons span{
+    margin-right: 5px;
+    font-size: 16px;
+    color: black;
 }

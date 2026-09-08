@@ -16,7 +16,8 @@ const [selectedImg, setSelectedImg] = useState(slideImg[0])
 
   
   return (
-    <section className="product-details">
+    <section  className="product-details-page"> 
+    <div className="product-details">
       <div className="imges-slide">
       
       </div>
@@ -31,12 +32,7 @@ const [selectedImg, setSelectedImg] = useState(slideImg[0])
             <FaStar/>
             <FaStar/>
             <FaStar/>
-            <FaStar/>
-          
-          
-          
-          
-          
+            <FaStar/> 
           </span>
          
           <p>(128 review)</p>
@@ -77,29 +73,48 @@ const [selectedImg, setSelectedImg] = useState(slideImg[0])
         </div>
          <p className="productDetails-addToWishlist"><CiHeart/>Add to Wishlist</p>
       </div>
-      <div className="features">
+  
+    </div>
+        <div className="features">
         <div className="icons">
-          <span><FaTruck/></span>
-          <div>
+<span><FaTruck/></span>
+          <div className="text">
             <h5>Free Shoppoing</h5>
             <p>On order over 50$</p>
           </div>
-          <span><FaClock/></span>
+
+        </div>
+
+    
+          <div className="icons"><span><FaClock/></span>
           <div>
             <h5>3o Days Resturns</h5>
             <p>Money back Gruntees</p>
           </div>
-          <span><RiSecurePaymentFill/></span>
+           </div>
+
+
+          
+<div className="icons">
+ <span><RiSecurePaymentFill/></span>
           <div>
             <h5>Secure Paymen</h5>
             <p>100% secure payment</p>
           </div>
-          <span><FaClockRotateLeft/></span>
+</div>
+
+
+         <div className="icons">
+<span><FaClockRotateLeft/></span>
           <div>
             <h5>24/7 Support</h5>
             <p>Dedcated Support</p>
           </div>
-        </div>
+         </div>
+
+
+
+          
       </div>
     </section>
   );
