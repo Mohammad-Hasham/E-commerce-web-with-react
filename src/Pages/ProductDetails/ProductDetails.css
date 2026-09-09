@@ -1,14 +1,44 @@
 .product-details-page{
 max-width: 95%;
+margin: 20px 10px;
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
 }
 
 .product-details{
     display: grid;
-    grid-template-columns:200px 1fr 1fr 
+    grid-template-columns:200px 1fr 1fr ;
 }
 
 .imges-slide{
-    
+   display:flex;
+   flex-direction: column;
+   gap: 10px;
+   align-items: center;
+   height: 350px;
+   overflow-y: auto;
+   scroll-snap-type: x mandatory;
+   width: 200px;
+}
+
+.imges-slide::-webkit-scrollbar{
+    display: none;
+}
+.imges-slide img {
+    scroll-snap-type: center;
+    background-color:rgb(246, 246, 246);
+    border-radius: 10px;
+    width: 100px;
+    background-position: center;
+    background-size: cover;
+    flex-shrink: 0;
+    scroll-snap-align: start;
+     transition: transform 0.3s ease;
+}
+.imges-slide img :hover{
+     transform: scale(1.05);
 }
 
 
@@ -20,18 +50,18 @@ max-width: 95%;
 
 
 
-.product-details-img{
+.product-details-img-container{
     background-color:rgb(246, 246, 246);
     display: flex;
     align-items: center;
     justify-content: center;
     border-radius: 10px;
     width: 100%;
-    height: 100%
+    height: 350px;
     
 }
 .product-detail-img{
-    width: 70%
+    width: 70%;
 }
 .product-details-informations{
     margin: 10px;
@@ -162,6 +192,7 @@ max-width: 95%;
     display:flex;
 justify-content: space-around;
 align-items: center;
+gap: 30px;
     width: 100%;
     margin: 50px;
 }
@@ -170,6 +201,7 @@ align-items: center;
     display: flex;
     align-items: center;
     font-size: 16px;
+    gap: 10px;
 
 
     
@@ -177,6 +209,58 @@ align-items: center;
 
 .icons span{
     margin-right: 5px;
-    font-size: 16px;
-    color: black;
+    font-size: 20px;
+    color:rgb(146, 28, 225);
 }
+
+
+.feature-text p{
+    color:gray;
+}
+
+.tabs{
+    margin: 20px;
+    font-size: 16px;
+    font-weight: 600;
+    height: 400px ;
+    width: 100%;
+}
+.tabs-btn{
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    margin: 20px 0;
+    
+}
+
+.tabs-btn button {
+    border: none;
+    background: none;
+    font-size: 16px;
+    cursor: pointer;
+
+    
+}
+
+.active{
+    color:rgb(146, 28, 225);
+    text-decoration: underline;
+}
+.tabs-info{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin: 0 20px;
+}
+.tabs-info ul {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+
+
+
+
+
+

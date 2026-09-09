@@ -9,7 +9,7 @@ useEffect(()=>{
             .then(res=>res.json())            
             .then(data => setProducts(data.products))
                 .catch((erorr) => {
-                    console.error(erorr)
+                       console.error("error")
                 })
 
 },[])

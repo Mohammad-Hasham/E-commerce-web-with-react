@@ -4,28 +4,58 @@ import { RiSecurePaymentFill } from "react-icons/ri";
 import { FaClockRotateLeft, FaStarHalfStroke } from "react-icons/fa6";
 import "./ProductDetails.css"
 import headPhoneimg from "../../assets/images/headPhone.png"
+import headPhone1 from "../../assets/images/headPhone.png"
+import headPhone2 from "../../assets/images/headPhone.png"
+import headPhone3 from "../../assets/images/headPhone.png"
+import headPhone4 from "../../assets/images/smartWatch.png"
+import headPhone5 from "../../assets/images/smartWatch.png"
 import { useState } from "react";
 import { FaStar, } from "react-icons/fa";
 import { CiHeart } from "react-icons/ci";
+import UseProductCards from "../../Hooks/useProduct";
+
 
 
 function ProductDetails() {
-const slideImg =  [1,2,3,4];
+  
+
+  const products = UseProductCards();
+
+
+  
+
+
+
+
+
+const slideImg =  [headPhone1,headPhone2, headPhone3, headPhone4,headPhone5];
 const [selectedImg, setSelectedImg] = useState(slideImg[0])
+
+const [activeTab , setActiveTab] = useState("description")
 
 
   
   return (
-    <section  className="product-details-page"> 
+    <>
+      {products.map((product) =>{
+        return(
+ <section  className="product-details-page"> 
     <div className="product-details">
       <div className="imges-slide">
-      
+    {slideImg.map((img,index) => (
+      <img 
+      key={index}
+      src={img}
+      alt=""
+      onClick={()=> setSelectedImg(img)}
+      />
+    ))}
       </div>
-      <div className="product-details-img">
-        <img src={headPhoneimg} alt=""  className="product-detail-img"/>
+      <div className="product-details-img-container">
+        <img src={product.images} alt=""  className="product-detail-img"/>
       </div>
       <div className="product-details-informations">
-        <h2 className="product-details-name"> Wirless Headphone</h2>
+        <h2 className="product-details-name">{product.title}</h2>
         <div className="product-information-rate">
           <span>
             <FaStar/>
@@ -35,24 +65,24 @@ const [selectedImg, setSelectedImg] = useState(slideImg[0])
             <FaStar/> 
           </span>
          
-          <p>(128 review)</p>
+          <p>({product.rating})</p>
         </div>
         <div className="product-information-price">
-        <p>$59.00</p>
-        <p>%99.99</p>
+        <p>${product.price}</p>
+        <p>${product.discountPercentage}</p>
         <p>40% OFF</p>
         </div>
         
-        <p className="productDetails-text">High-quality wirless HeadPhone with noise cancelation deeep cose and long battery life</p>
+        <p className="productDetails-text">{product.description}</p>
         <dl className="products-informations-deals">
           <dd>Brand:</dd>
-          <dt>Sumsung</dt>
+          <dt>{product.brand}</dt>
 
           <dd>SKU:</dd>
-          <dt>wh-it2900</dt>
+          <dt></dt>
 
           <dd>Avability:</dd>
-          <dt>inStock</dt>
+          <dt>{product.stock}</dt>
 
           <dd>Color:</dd>
           <dt>black</dt>
@@ -78,7 +108,7 @@ const [selectedImg, setSelectedImg] = useState(slideImg[0])
         <div className="features">
         <div className="icons">
 <span><FaTruck/></span>
-          <div className="text">
+          <div className="feature-text">
             <h5>Free Shoppoing</h5>
             <p>On order over 50$</p>
           </div>
@@ -87,7 +117,7 @@ const [selectedImg, setSelectedImg] = useState(slideImg[0])
 
     
           <div className="icons"><span><FaClock/></span>
-          <div>
+          <div className="feature-text">
             <h5>3o Days Resturns</h5>
             <p>Money back Gruntees</p>
           </div>
@@ -97,7 +127,7 @@ const [selectedImg, setSelectedImg] = useState(slideImg[0])
           
 <div className="icons">
  <span><RiSecurePaymentFill/></span>
-          <div>
+          <div className="feature-text">
             <h5>Secure Paymen</h5>
             <p>100% secure payment</p>
           </div>
@@ -106,17 +136,84 @@ const [selectedImg, setSelectedImg] = useState(slideImg[0])
 
          <div className="icons">
 <span><FaClockRotateLeft/></span>
-          <div>
+          <div className="feature-text">
             <h5>24/7 Support</h5>
             <p>Dedcated Support</p>
           </div>
          </div>
 
-
-
+ </div>
+<div className="tabs">
           
+     
+      <div className="tabs-btn">
+    <button className={activeTab === "description" ? "active" : ""}
+    onClick={()=> setActiveTab("description")}>
+      Descriptiion
+    </button>
+    <button className={activeTab === "info" ? "active" : ""}
+    onClick={() => setActiveTab("info")}
+    >
+    Addition
+    </button>
+    <button className={activeTab === "review" ? "active" : ""}
+    onClick={ ()=> setActiveTab ("review")}
+    >
+    Review
+    </button>
+
+      </div>
+
+      <div className="tabs-info" >
+        {activeTab === "description"  && (
+          <>
+            <p>Experience premium sound Quality with advanced noise cancellation technology. These headphones <br /> offer up to 30 hours of battery life and quick charge support </p>
+          <ul>
+            <li>Active Noise cancelation</li>
+          <li>Up to Houres Battery Life </li>
+          <li>Quick Charge (10min = 5houres play time)</li>
+          <li>Bluetooth 8.0</li>
+          <li>Comfortable Over Design</li>
+        </ul>
+        </>
+        )}
+
+        {activeTab === "info" && (
+          <>
+          <p>Weight:{product.weight}</p>
+          <p>{product.tags}</p>
+          <p>{product.category}</p>
+          <p>{product.returnPolicy}</p>
+          <p>{product.warrantyInformation}</p>
+          <p>Width: {product.dimensions.width} cm</p>
+<p>Height: {product.dimensions.height} cm</p>
+<p>Depth: {product.dimensions.depth} cm</p>
+          
+          
+          
+          </>
+        )}
+
+        {activeTab === "review" &&(
+          <div className="reviews">
+            {product.reviews.map((review,index) => (
+              <div className="per-review" key={index}>
+                <h4> Name:{review.reviewerName}</h4>
+                <p> Comment: {review.comment}</p>
+                <span>Rating:{review.rating}/5</span>
+              </div>
+            ))}
+          </div>
+        )}
+     
+        
+        
+      </div>
       </div>
     </section>
+        )
+      })}
+   </>
   );
 }
 

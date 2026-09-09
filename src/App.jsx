@@ -6,6 +6,7 @@ import Hero from './Pages/Hero/Hero'
 import Wishlist from './Pages/Wishlist/Wishlist';
 import Cards from './components/Product/ProductCard/productCard';
 import ProductDetails from "./Pages/ProductDetails/ProductDetails.jsx"
+import UseProductCards from './Hooks/useProduct.js';
 
 
   function App() {
