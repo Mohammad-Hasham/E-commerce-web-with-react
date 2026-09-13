@@ -7,7 +7,8 @@ import Wishlist from './Pages/Wishlist/Wishlist';
 import Cards from './components/Product/ProductCard/productCard';
 import ProductDetails from "./Pages/ProductDetails/ProductDetails.jsx"
 import UseProductCards from './Hooks/useProduct.js';
-import Model from './components/UI/Modal/model.jsx';
+import Footer from './components/layout/Footer/Footer.jsx';
+
 
 
 
@@ -15,7 +16,7 @@ import Model from './components/UI/Modal/model.jsx';
 
 
   return (
-    
+    <Footer/>
   );
 }
 
