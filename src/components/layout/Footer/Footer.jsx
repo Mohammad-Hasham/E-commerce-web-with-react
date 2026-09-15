@@ -1,23 +1,28 @@
 import "./Footer.css";
 import logo from '../../../assets/Images/Logo.png'
 import { FaFacebook } from "react-icons/fa";
-import { AiFillTwitterCircle } from "react-icons/ai";
-import { FaInstagramSquare } from "react-icons/fa";
-import { TiSocialPinterest } from "react-icons/ti";
+import { FaXTwitter } from "react-icons/fa6";
+import { FaInstagram} from "react-icons/fa";
+import { FaPinterest } from "react-icons/fa";
+import visaCard from "../../../assets/Images/visaCard.png"
+import masterCard from "../../../assets/Images/masterCard.png"
+import jsbCard from "../../../assets/Images/jcbCard.png"
+import discoverCard from "../../../assets/Images/DiscoverCard.png"
 
 function Footer() {
+
+
   return (
-    <footer className="footer">
+    <footer>
       <div className="footer-links">
         <div className="logo-platform">
-          <img src={logo} alt="" />
-          <p></p>
-
+          <img src={logo} alt=""  className="footer-logo"/>
+          <p>Your one-shop shop for <br />The best product at the best price</p>
           <div className="social-media">
-            <FaFacebook />
-            <AiFillTwitterCircle />
-            <FaInstagramSquare />
-            <TiSocialPinterest />
+            <FaFacebook className="facebook" />
+            <FaXTwitter className="twitter" />
+            <FaInstagram className="instagram" />
+            <FaPinterest  className="pintrest"/>
           </div>
         </div>
 
@@ -61,9 +66,22 @@ function Footer() {
           <p>
             Subecribe to get updates <br /> on can wait and offers
           </p>
-          <input type="text" />
+          <div className="email"> 
+            <input type="text" placeholder="Write your Email" />
           <button>Suberscibe</button>
+          </div>
+          
         </div>
+      </div>
+
+      <div className="copyright">
+       <p>@{new Date().getFullYear()}Shoply | All Right Reserved</p>
+      <div className="Bank-cards">
+<img src={visaCard} alt="" />
+<img src={masterCard} alt="" />
+<img src={jsbCard} alt="" />
+<img src={discoverCard} alt="" />
+      </div>
       </div>
     </footer>
   );

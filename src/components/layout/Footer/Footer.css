@@ -1,0 +1,148 @@
+
+
+footer {
+    display: flex;
+    flex-direction: column;
+background-color: rgb(26, 24, 36);
+    
+    padding: 20px;
+}
+ .footer-links{
+    display:flex;
+    justify-content: space-between;
+    width: 100%;
+ }
+
+ 
+
+ .footer-logo{
+width: 100px
+ }
+
+
+
+
+ h4{
+    font-size: 16px;
+    color: white;;
+ }
+ul {
+    font-size: 14px;
+    display:flex;
+    flex-direction: column;
+    gap: 10px;
+    cursor: pointer;
+    color: rgb(192, 185, 185);
+    margin-top: 20px;
+}
+
+li {
+  position: relative;
+  cursor: pointer;
+  list-style: none;
+}
+
+li::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -5px;
+  width: 70%;
+  height: 2px;
+  background-color: currentColor;
+
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.3s ease;
+}
+
+li:hover::after {
+  transform: scaleX(1);
+}
+p{
+    font-size: 13px;
+    color: rgb(192, 185, 185);
+}
+.logo-platform{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.social-media{
+    display: flex;
+    gap: 10px;
+    font-size: 20px;
+    cursor:pointer;
+    color: rgb(167, 164, 164);
+    
+}
+.facebook ,.twitter, .pintrest{
+    border-radius: 50%;
+}
+
+.facebook:hover{
+ background: #1877F2;
+}
+.twitter:hover{
+background-color:#201e1e ;
+}
+
+.instagram{
+    border-radius: 30%;
+
+}
+.instagram:hover{
+    background-color:#E4405F ;
+}
+
+.pintrest:hover{
+background-color:#E60023 ;
+}
+.newsletter{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.email{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.email input{
+    height: 20px;
+    padding:2px;
+    border-radius: 5px;
+    width: 200px;
+    
+}
+
+
+.email button{
+    color: white;
+    background-color: blueviolet;
+    border: none;
+    height: 30px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+.copyright{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    margin-top:20px
+    
+}
+
+.Bank-cards{
+    display: flex;
+    gap: 10px;
+}
+
+.Bank-cards img{
+    width: 30px;
+    height: auto;
+
+}
