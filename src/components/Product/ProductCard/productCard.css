@@ -1,68 +1,60 @@
-html{
-  font-size: 62.5%;
-}
-
-
 *{
-  padding: 0;
   margin: 0;
+  padding: 0;
 }
-
-
-.product-card{
-  width:200px;
-  height: 250px;
-  border-radius: 5px;
-  display: flex;
-  flex-direction: column ;
-  padding:10px;
-  background-color:#fff2db;
-  cursor: pointer;
-  box-sizing: border-box;
-  margin: 10px;
-  
-}
-.text-container{
+.card{
   display: flex;
   flex-direction: column;
-  line-height: 30px;
-  font-size: 15px;
+  width: 20%;
+  border: 1px solid;
+  border-radius: 2px ;
+  margin: 0 auto;
+  background-color: rgb(219, 215, 215);
+  
+  
 }
-.price{
-display: flex;
-gap: 30px;
-margin: 10px 0;
+.card-img {
+  position: relative;
+  width: 100%;
+  display: flex; 
+  justify-content: center;
 }
-.price :first-child{
-  font-weight: bold;
+.card-img img{
+  width: 150px ;
+  display: block;
 }
-.price :last-child{
-  color: rgb(76, 72, 72);
+.wishlist-heart{
+  position: absolute;
+  top: 0;
+  right: 10px;
+  font-size: 25px;
+}
+ .card h3{
+ margin: 10px;
+ font-size: 20px;
+ font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+
+.card-price{
+  display: flex;
+  gap: 20px;
+  justify-content: flex-start;
+  margin: 10px;
+}
+
+.card-price :last-child{
+  color: gray;
   text-decoration: line-through;
 }
 
-.img-whishlist{
-display: flex;
-align-items: flex-start;
-justify-content: flex-end;
-}
-.heart{
-cursor: pointer;
-width:20px;
-background: none;
-border: none;
-}
-.productcard-img{
-  width: 50%;
-  justify-self: center;
-  
+.card-price p {
+  font-weight: bold;
 }
 
-  
-
-.rating-star{
+.card-rating{
   display: flex;
-  gap: 5px;
-  align-items: center;
-  font-size: 20px;
+  gap: 20px;
+  margin: 5px 10px;
+  
 }

@@ -15,7 +15,7 @@ const [isOpen , setIsOpen] = useState(false)
   return (
     <nav className="navbar">
       <div className="navbar-items">
- <img src={Logo} alt="Logo" />
+ <img src={Logo} alt="Logo"/>
         <div className="search-bar">
         <input type="search"  className="search-items"  placeholder="Search Products" />
         <BiSearch className="search-tag"/>
@@ -25,11 +25,9 @@ const [isOpen , setIsOpen] = useState(false)
           <BiCartAdd/>
           <AiOutlineBars className="outline-bar" onClick={()=> setIsOpen(true)}/>
         </div>
-        
-
       </div>
       <div className="navbar-items2">  
-         <ul>
+         <ul className="navabr-ul">
           <li>Home</li>
           <li>Shop</li>
           <li>Catiguries</li>

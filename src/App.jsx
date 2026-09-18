@@ -1,22 +1,11 @@
 
 import './App.css'
-import Cart from './Pages/Cart/Cart';
-import Shop from './Pages/Shop/Shop';
-import Hero from './Pages/Hero/Hero'
-import Wishlist from './Pages/Wishlist/Wishlist';
-import Cards from './components/Product/ProductCard/productCard';
-import ProductDetails from "./Pages/ProductDetails/ProductDetails.jsx"
-import UseProductCards from './Hooks/useProduct.js';
-import Footer from './components/layout/Footer/Footer.jsx';
-
-
-
+import  Card  from './components/Product/ProductCard/productCard.jsx';
+import Raleted from './components/layout/Raleted/Raleted.jsx';
 
   function App() {
-
-
   return (
-    <Footer/>
+  <Raleted/>
   );
 }
 

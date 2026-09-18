@@ -14,14 +14,8 @@ body {
 
 .navbar {
   width: 100%;
-  height: 10rem;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  
-  box-sizing: border-box;
-  flex-direction: column;
   margin-bottom: 10px;
+  flex-direction: column;
   
   
 }
@@ -38,9 +32,8 @@ img {
   align-items: center;
   justify-content: space-between;
   width: 100%;
-  max-width: 1200px;
   padding-top: 1.5rem;
-  margin: 0 auto;
+  margin: 0 auto
 }
 
 .search-bar{
@@ -52,7 +45,6 @@ img {
 
 input {
   width: 25rem;
-  max-width: 100%;
   height: 3rem;
   border-radius: 1.6rem;
   padding: 1rem;
@@ -74,36 +66,41 @@ input {
 }
                                     /* This is the buttom Navbar */
 
+/* Navigation links */
+
 .navbar-items2 {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content:space-between;
   width: 100%;
-  max-width: 1200px;
-  margin: 0 auto;
-}
- .navbar-items2 ul {
-  display: flex;
   gap: 3rem;
-  margin-bottom: 2rem;
-}
- .navbar-items2 li {
-  list-style: none;
-  font-size: 1.5rem;
-  transition: 1s linear;
-  cursor: pointer;
-}
-li:hover {
- text-decoration: underline
-  
+  z-index: 100;
 }
 
-.login{
+.navabr-ul {
   display: flex;
-  gap: 10px;
+  flex-direction: row;
+  align-items: center;
+  gap: 3rem;
+  margin:20px;
+}
+
+.navbar-items2 li {
+  list-style: none;
+  color: black;
   font-size: 1.5rem;
   cursor: pointer;
-  margin-bottom: 2rem;
+}
+
+
+
+.login {
+  display: flex;
+  align-items: center;
+  font-size: 1.5rem;
+  cursor: pointer;
+  margin: 0 10px;
+  color: black;
 }
 
 
@@ -115,7 +112,6 @@ li:hover {
   width: 250px;
   height: 100vh;
   transition: 0.3s;
-  background-color: white;
 }
 .side-bar.show{
   right: 0;

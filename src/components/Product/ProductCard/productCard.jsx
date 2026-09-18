@@ -1,75 +1,31 @@
-import { useState,useEffect } from 'react'
-import './productCard.css'
-import { FaHeart, FaStar, } from "react-icons/fa";
-import { FaStarHalfAlt } from 'react-icons/fa';
-import { FaRegStar } from 'react-icons/fa';
-import Shop from '../../../Pages/Shop/Shop';
-import UseProductCards from '../../../Hooks/useProduct';
+import HeadPhone from "../../../assets/Images/headphone.png"
+import "./productCard.css"
+import {CiHeart} from 'react-icons/ci'
+import {FaStar} from "react-icons/fa"
+function Card() {
+  return (
+    <div className="card">
+      <div className="card-img">
+        <CiHeart className="wishlist-heart"/>
+        <img src={HeadPhone} alt="" />
+      </div>
+      <h3>product-name</h3>
+      <div className="card-price">
+<p>price</p>
+<p>preveous price</p>
+      </div>
 
-
-
-function Cards ({addToWishlist,addToCart}){
-
-const products = UseProductCards()
-return(
-<>
-{products.slice(0,12).map((product) =>{
-
-
-
-
- const rating = product?.rating?.rate || 0;
-const fullStars = Math.floor(rating);
-const hasHalfStar = rating % 1 >= 0.5;
-const emptyStars = 5 - fullStars - (hasHalfStar ? 1 : 0 );
-const discount = product.price * 0.5;
-
- return(
-
-    
-            <div className='product-card' key={product.id} product={product}>
-                <div className='img-whishlist'>
-                    <button onClick={() => addToCart(product)}>add Cart</button>
-                    <img className='productcard-img' src={product.thumbnail} alt={product.title} />
-
-                     <button className='heart' onClick={()=> addToWishlist(product)}><FaHeart/></button>
-                </div>
-              
-
-<div className='text-container'>
-    <h3>{product.title}</h3>
-<div className='price'>
-    <p>${discount.toFixed(2)}</p>
-    <p>${product.price}</p>
-</div>
-</div>
-<div className='rating-star'>
-
-    {[...Array(fullStars)].map((_ , i) =>(
-        <FaStar key={`full-${i}`} color="gold"/>
-    ))}
-
-    {hasHalfStar && <FaStarHalfAlt color="gold"/>}
-
-    {[...Array(emptyStars)].map((_ , i) =>(
-        <FaRegStar key={`empty-${i}`} color="black"/>
-    ))}
-
-    <p>({rating})
-
-    </p>
-</div>
-</div>
- 
- );
-})}
-
-</>
-)
-
-
-    
-
+      <div className="card-rating">
+        <p>
+          <FaStar/>
+          <FaStar/>
+          <FaStar/>
+          <FaStar/>
+          <FaStar/>
+        </p>
+        <p>(129)</p>
+      </div>
+    </div>
+  );
 }
-
-export default Cards
+export default Card;
