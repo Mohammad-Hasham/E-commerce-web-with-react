@@ -37,7 +37,7 @@ const [activeTab , setActiveTab] = useState("description")
   
   return (
     <>
-      {products.map((product) =>{
+      {products.slice(0,1).map((product) =>{
         return(
  <section  className="product-details-page"> 
     <div className="product-details">
@@ -52,10 +52,10 @@ const [activeTab , setActiveTab] = useState("description")
     ))}
       </div>
       <div className="product-details-img-container">
-        <img src={product.images} alt=""  className="product-detail-img"/>
+        <img src={selectedImg} alt=""  className="product-detail-img"/>
       </div>
       <div className="product-details-informations">
-        <h2 className="product-details-name">{product.title}</h2>
+        <h2 className="product-details-name"></h2>
         <div className="product-information-rate">
           <span>
             <FaStar/>
@@ -65,24 +65,24 @@ const [activeTab , setActiveTab] = useState("description")
             <FaStar/> 
           </span>
          
-          <p>({product.rating})</p>
+          <p>()</p>
         </div>
         <div className="product-information-price">
-        <p>${product.price}</p>
-        <p>${product.discountPercentage}</p>
+        <p>$</p>
+        <p>$</p>
         <p>40% OFF</p>
         </div>
         
-        <p className="productDetails-text">{product.description}</p>
+        <p className="productDetails-text"></p>
         <dl className="products-informations-deals">
           <dd>Brand:</dd>
-          <dt>{product.brand}</dt>
+          <dt></dt>
 
           <dd>SKU:</dd>
           <dt></dt>
 
           <dd>Avability:</dd>
-          <dt>{product.stock}</dt>
+          <dt></dt>
 
           <dd>Color:</dd>
           <dt>black</dt>
@@ -180,14 +180,14 @@ const [activeTab , setActiveTab] = useState("description")
 
         {activeTab === "info" && (
           <>
-          <p>Weight:{product.weight}</p>
-          <p>{product.tags}</p>
-          <p>{product.category}</p>
-          <p>{product.returnPolicy}</p>
-          <p>{product.warrantyInformation}</p>
-          <p>Width: {product.dimensions.width} cm</p>
-<p>Height: {product.dimensions.height} cm</p>
-<p>Depth: {product.dimensions.depth} cm</p>
+          <p>Weight:</p>
+          <p></p>
+          <p></p>
+          <p></p>
+          <p></p>
+          <p>Width: cm</p>
+<p>Height:cm</p>
+<p>Depth:cm</p>
           
           
           
