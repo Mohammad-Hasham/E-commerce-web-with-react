@@ -3,23 +3,28 @@
     padding: 0;
  }
 .related{
-    max-width: 95%;
+    max-width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     
 
     
 }
 
-h2{
-    text-align: left;
-    font-size: 20px;
+ .related h2 {
+    margin: 20px;
+    font-size: 25px;
 }
+
+
 
 
 .related-product{
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 20px;
+    gap: 30px;
 
 }
 

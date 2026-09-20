@@ -15,8 +15,8 @@ function Card({product}) {
       <div className="info">
          <h3>{product.title}</h3>
       <div className="card-price">
-<p>${product.discountPercentage}</p>
 <p>${product.price}</p>
+<p>{product.discountPercentage}OFF</p>
       </div>
 
       <div className="card-rating">
