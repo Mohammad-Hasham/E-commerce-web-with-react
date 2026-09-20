@@ -5,29 +5,28 @@
 .card{
   display: flex;
   flex-direction: column;
-  width: 250px;
-  height: 300px;
-  border: 1px solid;
-  border-radius: 10px ;
+  width: 280px;
+  min-height: 400px;
+  border-radius: 12px ;
   background-color: rgb(245, 242, 242);
   cursor: pointer;
-  padding: 4px;
   box-sizing: border-box;
+  overflow: hidden;
   
   
 }
 .card-img {
-  position: relative;
+    position: relative;
   width: 100%;
-  height: 100%;
-  display: flex; 
+  height: 240px;
+  display: flex;
+  align-items: center;
   justify-content: center;
 }
 .card-img img{
-  width:150px ;
-  height: 150px;
-  background-position:center;
-  background-size: cover;
+  width:100% ;
+  height:100%;
+  object-fit: contain;
 }
 .wishlist-heart{
   position: absolute;
@@ -40,8 +39,10 @@
 .info{
   display: flex;
   flex-direction: column;
-  justify-content: flex-end;
   width: 100%;
+  box-sizing: border-box;
+  padding: 12px 15px;
+  margin-top: auto;
 }
  .info h3{
  

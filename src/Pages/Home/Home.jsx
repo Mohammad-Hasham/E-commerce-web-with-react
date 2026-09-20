@@ -1,26 +1,22 @@
-import Navbar from "../../components/layout/Navbar/Navbar"
-import Raleted from "../../components/Product/Raleted/Raleted"
-import Hero from "../Hero/Hero"
-import Footer from "../../components/layout/Footer/Footer"
-import Offer from "../../components/Product/Offer/Offer"
+import Navbar from "../../components/layout/Navbar/Navbar";
+import Raleted from "../../components/Product/Raleted/Raleted";
+import Hero from "../Hero/Hero";
+import Footer from "../../components/layout/Footer/Footer";
+import Offer from "../../components/Product/Offer/Offer";
+import "./Home.css";
 
-
-function Home (){
-    return(
-
-        <>
-         <Navbar/>
- <Hero/>
- <Raleted details ="Categoryes"/>
- <Raleted details ="Feautured"/>
- <Offer/>
- <Raleted details = "Best Seller"/>
- <Footer/>
-        </>
-
-    )
-   
+function Home() {
+  return (
+    <section className="home">
+      <Navbar />
+      <Hero />
+      <Raleted details="Categoryes" />
+      <Raleted details="Feautured" />
+      <Offer />
+      <Raleted details="Best Seller" />
+      <Footer />
+    </section>
+  );
 }
 
-
-export default Home
+export default Home;

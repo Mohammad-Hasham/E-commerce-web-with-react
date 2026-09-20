@@ -3,7 +3,6 @@ import './Wishlist.css'
 import {FaRegEye} from "react-icons/fa"
 import {FaTrash} from "react-icons/fa"
 import {useState} from "react"
-import Shop from '../Shop/Shop'
 import Cart from '../Cart/Cart'
 
 function Wishlist ({wishlist, removeFromWishlist,increament , decreament,addToCart}){

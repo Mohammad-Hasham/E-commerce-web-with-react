@@ -14,9 +14,9 @@ return(
 <h2>{props.details}</h2>
 <p className="view-all">View all</p>
    <div className="related-product">
-      {products.slice(0,5).map((product)=>(
+      {products.slice(0,4).map((product)=>(
  <Card
-   key={product}
+   key={product.id}
    product={product}
    />
 

@@ -7,6 +7,7 @@ import {BiLogIn} from "react-icons/bi"
 import { AiOutlineCloseSquare } from "react-icons/ai";
 import { AiOutlineBars } from "react-icons/ai";
 import { useState } from "react";
+import { Link } from "react-router-dom";
 
 function Navbar() {
 const [isOpen , setIsOpen] = useState(false)
@@ -21,15 +22,15 @@ const [isOpen , setIsOpen] = useState(false)
         <BiSearch className="search-tag"/>
         </div>
         <div className="add-list">
-          <BiHeart/>
-          <BiCartAdd/>
+          <Link to="/Wishlist"><BiHeart/></Link>
+           <Link to="/Cart"><BiCartAdd/></Link>
           <AiOutlineBars className="outline-bar" onClick={()=> setIsOpen(true)}/>
         </div>
       </div>
       <div className="navbar-items2">  
          <ul className="navabr-ul">
-          <li>Home</li>
-          <li>Shop</li>
+          <li><Link to="/">Home</Link></li>
+          <li> <Link to= "/shop">Shop</Link></li>
           <li>Catiguries</li>
           <li>Deals</li>
           <li>Blogs</li>
