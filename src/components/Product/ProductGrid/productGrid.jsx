@@ -1,13 +1,16 @@
-import Cards from '../ProductCard/productCard.jsx'
+import Card from "../ProductCard/productCard";
 import "./productGrid.css"
 
 
-function ProductGride(){
-
+function ProductGrid (){
     return(
-        <section className="product-list">
-         <Cards/>
+
+        <section className="Productgrid">
+        <Card/>
+
+
         </section>
     )
 }
-export default ProductGride
+
+export default ProductGrid;

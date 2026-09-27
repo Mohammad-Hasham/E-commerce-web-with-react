@@ -1,14 +1,12 @@
-
+import ProductGrid from "../../components/Product/ProductGrid/productGrid"
+import Card from "../../components/Product/ProductCard/productCard"
 function Shop(){
 return(
-<div>
 
-
-    <h1>Welcome to the shop </h1>
-</div>
-
-    
+    <ProductGrid/>
 )
+    
+
 
 
 
